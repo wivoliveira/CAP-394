@@ -1,4 +1,4 @@
-## CAP-394 (Introdução à Data Science)
+## Introdução à Data Science (CAP-394)
 
 Nome: Willian Vieira de Oliveira
 
