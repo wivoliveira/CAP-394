@@ -6,6 +6,7 @@
 <h1> <center> Spatial-temporal differences in cloud cover of satellite observations across the Brazilian Amazon rainforest</center> </h1>
 <center> Willian Vieira de Oliveira </center>
 
+
 <div style="text-align: right"> [ Part 1 - About the project and the data ] </div>
 
 ### SUMMARY
