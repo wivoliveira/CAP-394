@@ -3,11 +3,11 @@
 
 ***
 
-<h1> <center> Spatial-temporal differences in cloud cover of satellite observations across the Brazilian Amazon rainforest</center> </h1>
-<center> Willian Vieira de Oliveira </center>
+<h1> <p align="center"> Spatial-temporal differences in cloud cover of satellite observations across the Brazilian Amazon rainforest</p> </h1>
+<p align="center"> Willian Vieira de Oliveira </p>
 
 
-<div style="text-align: right"> [ Part 2 - Basic processing and statistics of the data ] </div>
+<p align="right"> [ Part 2 - Basic processing and statistics of the data ] </p>
 
 ### SUMMARY
 
@@ -17,11 +17,11 @@
     1. [Processed data](#ProcessedData)
     1. [Additional data](#AdditionalData)
 1. [**Questions about the data**](#Questions)
-1. [**Basic processing of the data**](./2_Basic_processing.md#BasicProc)
-1. [**Statistics**](./2_Basic_processing.md#Stats)
-1. [**Exploratory Data Analysis**](./3_EDA.md#EDA)
-1. [**Results**](./4_Results_and_Conclusion.md#Results)
-1. [**Conclusion**](./4_Results_and_Conclusion.md#Conclusion)
+1. [**Basic processing of the data**](./2_Basic_processing.ipynb#BasicProc)
+1. [**Statistics**](./2_Basic_processing.ipynb#Stats)
+1. [**Exploratory Data Analysis**](./3_EDA.ipynb#EDA)
+1. [**Results**](./4_Results_and_Conclusion.ipynb#Results)
+1. [**Conclusion**](./4_Results_and_Conclusion.ipynb#Conclusion)
 ***
 
 <a id='BasicProc'></a>
@@ -69,9 +69,9 @@ To be concluded...
 
 ```
 
-[<div style="text-align: left"> **<<Previous notebook** </div>](./1_Project.md)
+[<p align="left"> **<< Previous notebook** </p>](./1_Project.ipynb)
 
-[<div style="text-align: right"> **Next notebook >>** </div>](./3_EDA.md)
+[<p align="right"> **Next notebook >>** </p>](./3_EDA.ipynb)
 
 ***
 ## References
