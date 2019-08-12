@@ -12,11 +12,11 @@
 ### SUMMARY
 
 1. [**About**](./1_Project.md#About)
-1. [**The Data**](#TheData)
-    1. [Raw data](#RawData)
-    1. [Processed data](#ProcessedData)
-    1. [Additional data](#AdditionalData)
-1. [**Questions about the data**](#Questions)
+1. [**The Data**](./1_Project.md#TheData)
+    1. [Raw data](./1_Project.md#RawData)
+    1. [Processed data](./1_Project.md#ProcessedData)
+    1. [Additional data](./1_Project.md#AdditionalData)
+1. [**Questions about the data**](./1_Project.md#Questions)
 1. [**Basic processing of the data**](./2_Basic_processing.md#BasicProc)
 1. [**Statistics**](./2_Basic_processing.md#Stats)
 1. [**Exploratory Data Analysis**](./3_EDA.md#EDA)
