@@ -1485,7 +1485,7 @@ In addition, the following data ca also be useful:
 1. What is the percentage of scenes free of cloud in each region?
 1. Which state did present the lowest annual cloud cover?
 
-<p align="right"> **Next notebook >>** </p>](./2_Basic_processing.md)
+[<p align="right"> **Next notebook >>** </p>](./2_Basic_processing.md)
 
 ***
 ## References
