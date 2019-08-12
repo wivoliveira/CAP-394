@@ -11,7 +11,7 @@
 
 ### SUMMARY
 
-1. [**About**](#About)
+1. [**About**](./1_Project.md#About)
 1. [**The Data**](#TheData)
     1. [Raw data](#RawData)
     1. [Processed data](#ProcessedData)
