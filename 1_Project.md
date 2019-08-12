@@ -71,7 +71,7 @@ The period of study of this project was defined considering mainly the Landsat-8
 
 #### CBERS timeline:
 <p align="center"><img src="./images/CBERS_4_timeline.png" width="60%"></p>
-<br><p align="center">(CAMARA, 2009)</p>
+<p align="center">(CAMARA, 2009)</p>
 
 #### LANDSAT timeline:
 <p align="center"><img src="./images/landsat-timeline.jpg" width="60%"></p>
