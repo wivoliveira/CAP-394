@@ -65,7 +65,7 @@ plt.show()
 
 ### Timeline of the analysed sensors
 
-<p align="justify"> <br>
+<p align="justify">
 The period of study of this project was defined considering mainly the Landsat-8/OLI timeline, which started in February 2013. The following figures illustrate the timelime of the CBERS, LANDSAT and Sentinel missions.
 </p>
 
