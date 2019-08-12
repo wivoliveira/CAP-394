@@ -17,11 +17,11 @@
     1. [Processed data](#ProcessedData)
     1. [Additional data](#AdditionalData)
 1. [**Questions about the data**](#Questions)
-1. [**Basic processing of the data**](./2_Basic_processing.ipynb#BasicProc)
-1. [**Statistics**](./2_Basic_processing.ipynb#Stats)
-1. [**Exploratory Data Analysis**](./3_EDA.ipynb#EDA)
-1. [**Results**](./4_Results_and_Conclusion.ipynb#Results)
-1. [**Conclusion**](./4_Results_and_Conclusion.ipynb#Conclusion)
+1. [**Basic processing of the data**](./2_Basic_processing.md#BasicProc)
+1. [**Statistics**](./2_Basic_processing.md#Stats)
+1. [**Exploratory Data Analysis**](./3_EDA.md#EDA)
+1. [**Results**](./4_Results_and_Conclusion.md#Results)
+1. [**Conclusion**](./4_Results_and_Conclusion.md#Conclusion)
 ***
 
 <a id='About'></a>
@@ -1551,7 +1551,7 @@ In addition, the following data ca also be useful:
 1. What is the percentage of scenes free of cloud in each region?
 1. Which state did present the lowest annual cloud cover?
 
-[<div style="text-align: right"> **Next notebook >>** </div>](./2_Basic_processing.mb)
+[<div style="text-align: right"> **Next notebook >>** </div>](./2_Basic_processing.md)
 
 ***
 ## References
