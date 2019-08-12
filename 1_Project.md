@@ -7,7 +7,7 @@
 <center> Willian Vieira de Oliveira </center>
 
 
-<div style="text-align: right"> [ Part 1 - About the project and the data ] </div>
+<p align="right"> [ Part 1 - About the project and the data ] </p>
 
 ### SUMMARY
 
