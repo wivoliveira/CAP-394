@@ -60,7 +60,7 @@ plt.show()
 ```
 
 
-![png](output_6_0.png)
+<p align="center"> ![png](output_6_0.png) </p>
 
 
 ### Timeline of the analysed sensors
