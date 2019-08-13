@@ -90,6 +90,15 @@ The period of study of this project was defined considering mainly the Landsat-8
 The data analysed in this project includes the archives of metadata related to the images acquired by the sensors Landsat-8/OLI and Sentinel-2/MSI, accross the region of the Brazilian Amazon during the period between February 2013 and July 2019. These datasets were obtained using the Earth Explorer (EE) tool. The search was performed using a shapefile that describes the limits of the Brazilian states that include the Amazon Forest. However, the EE allows the use of shapefiles composed of up to 30 points. Therefore, it is possible to use only a limited representation of the boundaries of the Brazilian Amazon. The original dataset will be later filtered to include only the metadata regarding scenes that intersects the Amazon biome.
 </p>
 
+#### Search parameters
+
+- **Website:** http://earthexplorer.usgs.gov
+- **Data range (mm/dd/yyyy):** from 02/01/2013 to 07/31/2019
+- **Shapefile (up to 30 pts):** [Limite_AMZLEG_30pts.zip](./Data/Amazonia_Legal/EarthExplorer/Limite_AMZLEG_30pts.zip)
+- **Data Sets:** Landsat 8 OLI/TIRS C1 Level-1 and Sentinel-2
+- **Observation:** The EE lists only 100 results. However, it is possible to export all results (Non-Limited Results) in different formats (e.g., kmz, csv, shp)
+
+
 <p align="justify">
 This data is not tidy, once the data is not well-organized ant there is too much information to be described in a single table. The raw data includes data regarding 34.689 scenes obtained by the Landsat-8/OLI and 142.994 scenes acquired by the Sentinel-2/MSI. The difference between the number of scenes acquired by the sensors is due to the characteristics of each sensor and their respective temporal resolution.
 </p>
