@@ -86,7 +86,7 @@ The period of study of this project was defined considering mainly the Landsat-8
 <a id='RawData'></a>
 ### 2.1 Raw data
 
-<p align="justify"> <br>
+<p align="justify">
 The data analysed in this project includes the archives of metadata related to the images acquired by the sensors Landsat-8/OLI and Sentinel-2/MSI, accross the region of the Brazilian Amazon during the period between February 2013 and July 2019. These datasets were obtained using the Earth Explorer (EE) tool. The search was performed using a shapefile that describes the limits of the Brazilian states that include the Amazon Forest. However, the EE allows the use of shapefiles composed of up to 30 points. Therefore, it is possible to use only a limited representation of the boundaries of the Brazilian Amazon. The original dataset will be later filtered to include only the metadata regarding scenes that intersects the Amazon biome.
 </p>
 
@@ -111,7 +111,19 @@ L8_archive.head(5)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -582,6 +594,19 @@ S2_archive.head(5)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -943,7 +968,7 @@ S2_archive.head(5)
 <a id='ProcessedData'></a>
 ### 2.2 Preprocessed data
 
-<p align="justify"> <br>
+<p align="justify">
 The original metadata archives do not follow the same structure. Therefore, it is necessary to extract only the data that might be useful in this project and define a new dataframe, composed of data related to the products obtained by both sensors.
 </p>
 
@@ -957,6 +982,10 @@ The original metadata archives do not follow the same structure. Therefore, it i
 - The naming convention of Sentinel 2 products (Vendor ID) might vary according to the scene. Examples of product ID related to scenes acquired in the same day (03/02/2019):
     - S2A_OPER_MSI_L1C_TL_SGS__20160818T195844_A006042_T19MEV_N02.04
     - L1C_T23LLH_A006041_20160818T132512
+    
+    
+- Landsat Level-1 data products are processed to a northern (positive) Universal Transverse Mercator (UTM) projection zone, regardless of whether the scene is in the Northern or Southern Hemisphere. This differs from the Sentinel products, which present the UTM zone followed by the identification of the hemisphere in which the scene was taken.
+    - Read more: https://www.usgs.gov/faqs/why-do-landsat-scenes-southern-hemisphere-display-negative-utm-values?qt-news_science_products=0#qt-news_science_products
     
 
 #### Structure of the new dataframe
@@ -979,6 +1008,19 @@ df
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1006,7 +1048,7 @@ df
 
 #### Assigning data to the new dataframe
 
-<p align="justify"> <br>
+<p align="justify">
 First of all, we select only the information of interest and attribute it to a dictionary. We perform this procedure in order to improve the performance of the data selection and the definition of an unique dataframe.
 </p>    
 
@@ -1043,6 +1085,19 @@ L8_df.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1222,12 +1277,14 @@ L8_df.head(10)
 
 
 ```python
+from datetime import datetime
+
 S2_dict = {}
 
 for index, row in S2_archive.iterrows():
     S2_dict[index] = {
-        "Product ID": row['Vendor Tile ID'], 
-        "Acquisition Date": datetime.strptime(scene['Acquisition End Date'][0:10], '%Y-%m-%d').date(),
+        "Product ID": row['Vendor Product ID'], 
+        "Acquisition Date": datetime.strptime(row['Acquisition End Date'][0:10], '%Y-%m-%d').date(),
         "WRS Path": None,
         "WRS Row": None,
         "Tile Number": row['Tile Number'],
@@ -1251,6 +1308,19 @@ S2_df.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1272,8 +1342,8 @@ S2_df.head(10)
   <tbody>
     <tr>
       <th>0</th>
-      <td>L1C_T21MXN_A012534_20190731T140100</td>
-      <td>2019-02-03</td>
+      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21MXN_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T21MXN</td>
@@ -1287,8 +1357,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>1</th>
-      <td>L1C_T21LYF_A012534_20190731T140426</td>
-      <td>2019-02-03</td>
+      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21LYF_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T21LYF</td>
@@ -1302,8 +1372,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>2</th>
-      <td>L1C_T23MQQ_A021442_20190731T131247</td>
-      <td>2019-02-03</td>
+      <td>S2A_MSIL1C_20190731T131251_N0208_R138_T23MQQ_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T23MQQ</td>
@@ -1317,8 +1387,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>3</th>
-      <td>L1C_T19LDJ_A021443_20190731T144736</td>
-      <td>2019-02-03</td>
+      <td>S2A_MSIL1C_20190731T144741_N0208_R139_T19LDJ_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T19LDJ</td>
@@ -1332,8 +1402,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>4</th>
-      <td>L1C_T23MQR_A021442_20190731T131247</td>
-      <td>2019-02-03</td>
+      <td>S2A_MSIL1C_20190731T131251_N0208_R138_T23MQR_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T23MQR</td>
@@ -1347,8 +1417,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>5</th>
-      <td>L1C_T19LDL_A021443_20190731T144736</td>
-      <td>2019-02-03</td>
+      <td>S2A_MSIL1C_20190731T144741_N0208_R139_T19LDL_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T19LDL</td>
@@ -1362,8 +1432,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>6</th>
-      <td>L1C_T19LDH_A021443_20190731T144736</td>
-      <td>2019-02-03</td>
+      <td>S2A_MSIL1C_20190731T144741_N0208_R139_T19LDH_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T19LDH</td>
@@ -1377,8 +1447,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>7</th>
-      <td>L1C_T22NDF_A012534_20190731T140100</td>
-      <td>2019-02-03</td>
+      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T22NDF_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T22NDF</td>
@@ -1392,8 +1462,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>8</th>
-      <td>L1C_T21MXP_A012534_20190731T140426</td>
-      <td>2019-02-03</td>
+      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21MXP_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T21MXP</td>
@@ -1407,8 +1477,8 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>9</th>
-      <td>L1C_T21MZS_A012534_20190731T140100</td>
-      <td>2019-02-03</td>
+      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21MZS_2...</td>
+      <td>2019-07-31</td>
       <td>None</td>
       <td>None</td>
       <td>T21MZS</td>
@@ -1485,7 +1555,7 @@ In addition, the following data ca also be useful:
 1. What is the percentage of scenes free of cloud in each region?
 1. Which state did present the lowest annual cloud cover?
 
-[<p align="right"> **Next notebook >>** </p>](./2_Basic_processing.md)
+[<p align="right"> **Next notebook >>** </p>](./2_Basic_processing.ipynb)
 
 ***
 ## References
