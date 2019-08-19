@@ -61,7 +61,19 @@ raw_data#.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1134,12 +1146,12 @@ tidy_data.drop(index_delete, inplace=True)
 
 
 ```python
-print("There are ", len(index_delete), " observations that present negative cloud cover.")
+print("There are", "\033[1m", len(index_delete), "\033[0m", "observations that present negative cloud cover.")
 
 print("\nNew structure of the dataframe: ", tidy_data.shape)
 ```
 
-    There are 183 observations that present negative cloud cover.
+    There are [1m 183 [0m observations that present negative cloud cover.
     
     New structure of the dataframe:  (177500, 12)
     
@@ -1267,7 +1279,19 @@ tidy_data.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1409,7 +1433,19 @@ tidy_data
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2474,6 +2510,22 @@ tidy_data
 </div>
 
 
+
+#### Writing the tidy dataframe to file (preliminary version)
+
+
+```python
+filename = 'Output/Metadata/Metadata_L8_S2_tidy.csv'
+
+try:
+    tidy_data.to_csv(filename, sep=',', index=False, encoding='utf-8')
+    print("The dataframe was written to file!")
+except Exception as e:
+    print(str(e))
+```
+
+    The dataframe was written to file!
+    
 
 ### To be concluded...
 
