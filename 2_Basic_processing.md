@@ -1134,12 +1134,12 @@ tidy_data.drop(index_delete, inplace=True)
 
 
 ```python
-print("There are", "\033[1m", len(index_delete), "\033[0m", "observations that present negative cloud cover.")
+print("There are ", len(index_delete), " observations that present negative cloud cover.")
 
 print("\nNew structure of the dataframe: ", tidy_data.shape)
 ```
 
-    There are [1m 183 [0m observations that present negative cloud cover.
+    There are 183 observations that present negative cloud cover.
     
     New structure of the dataframe:  (177500, 12)
     
