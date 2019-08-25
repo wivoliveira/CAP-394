@@ -52,7 +52,6 @@ import geopandas as gpd
 import folium
 import os, shutil
 from glob import glob
-import imgkit
 ```
 
 
