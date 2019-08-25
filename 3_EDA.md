@@ -295,7 +295,7 @@ m.save('Data/wrs2/wrs.html')
 ```
 
 Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github.
-<p align="center"><img src="./images/LandsatGrids.png" width="100%"></p>
+<p align="center"><img src="./images/LandsatGrids.PNG" width="100%"></p>
 
 
 ```python
@@ -482,7 +482,7 @@ m.save('Data/Sentinel2_granule_zones/tiles.html')
 ```
 
 Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github.
-<p align="center"><img src="./images/SentinelTiles.png" width="100%"></p>
+<p align="center"><img src="./images/SentinelTiles.PNG" width="100%"></p>
 
 
 ```python
