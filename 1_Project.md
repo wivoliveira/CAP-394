@@ -1490,7 +1490,7 @@ In addition, the following data ca also be useful:
 
 ## 3. Questions about the data
 
-1. How many scenes are necessary to cover the entire Brazilian Amazon, considering each sensor?
+1. How many scenes intersect the Brazilian Amazon, considering each satellite?
 1. What is the average percentage of cloud cover observed for each sensor?
 1. Which regions are more affected by cloud cover?
     1. Do the regions that are more affected by cloud cover present the highest deforastation rates? (????? deforastation data)
