@@ -61,7 +61,19 @@ raw_data#.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1237,7 +1249,7 @@ tidy_data["Platform"] = tidy_data["Platform"].astype('category')
 **Landsat** uses the Worldwide Reference System (**WRS**), which is a global system that catalogs Landsat data by Path and Row numbers.
 
 
-On the other hand, **Sentinel** adopts the UTM system, which divides the Earth's surface into granules. The granules, also called **tiles**, are 100x100 km2 ortho-images in UTM/WGS84.
+On the other hand, **Sentinel** adopts the UTM system, which divides the Earth's surface into granules. The granules, also called **tiles**, are 100x100 km² orthoimages in UTM/WGS84.
 
 
 Here, I created a column named "Catalog system" to describe the system related to each observation. This column tells me if I should analyse the columns "WRS Path" and "WRS Row" or just the column "Tile Number".
@@ -1267,7 +1279,19 @@ tidy_data.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1376,9 +1400,9 @@ tidy_data.head()
 
 ##### Identifying the hemisphere of each observation
 
-Sentinel data presents the hemisphere along with the UTM Zone. On the other hand, Landsat data does not include this information. However, the framing of the Landsat data is uniform for each orbit. The adjacent east-west scenes have scene center locations at the same nominal latitude. A notation of Row numbers can, therefore, be applied to identify all scenes occurring at the same latitude. **Row 060 corresponds to latitude 0 (equator)**. Row 059 is immediately north of this.
+Sentinel data presents the hemisphere along with the UTM Zone. On the other hand, Landsat data do not include this information. However, the framing of the Landsat data is uniform for each orbit. The adjacent east-west scenes have scene center locations at the same nominal latitude. A notation of Row numbers can, therefore, be applied to identify all scenes occurring at the same latitude. **Row 060 corresponds to latitude 0 (equator)**. Row 059 is immediately north of this.
 
-**Obs.:** I considered that the grids the cross the equator line are in the Northern hemisphere.
+**Obs.:** I considered that the grids that cross the equator line are in the Northern hemisphere.
 
 Read more: https://landsat.gsfc.nasa.gov/the-worldwide-reference-system/
 
@@ -1418,7 +1442,19 @@ tidy_data
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2514,7 +2550,19 @@ tidy_data.describe(include='all')
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2740,7 +2788,19 @@ tidy_data[tidy_data["Platform"] == "L8"].describe(include='all')
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2966,7 +3026,19 @@ tidy_data[(tidy_data["Platform"] == "S2A") | (tidy_data["Platform"] == "S2B")].d
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
