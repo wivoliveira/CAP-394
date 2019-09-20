@@ -863,7 +863,7 @@ for i, row in wrs_intersection.iterrows():
         g.add_to(m)
 
 folium.LayerControl().add_to(m)
-m.save('Data/wrs2/wrs_perState.html')
+m.save('Output/L8_Grids_perState.html')
 #m
 ```
 
@@ -900,6 +900,7 @@ df_grid_perState
       <th>NOME</th>
       <th>geometry</th>
       <th>Number_L8_grids</th>
+      <th>Number_S2_grids</th>
     </tr>
   </thead>
   <tbody>
@@ -909,6 +910,7 @@ df_grid_perState
       <td>b'Rond\xf4nia'</td>
       <td>POLYGON ((-60.70872435793023 -13.6933369594173...</td>
       <td>10</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -916,6 +918,7 @@ df_grid_perState
       <td>ACRE</td>
       <td>POLYGON ((-66.80690861022219 -9.81492014010332...</td>
       <td>8</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
@@ -923,6 +926,7 @@ df_grid_perState
       <td>b'AMAP\xc1'</td>
       <td>POLYGON ((-54.87266013107782 2.433385649611453...</td>
       <td>6</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
@@ -930,6 +934,7 @@ df_grid_perState
       <td>AMAZONAS</td>
       <td>POLYGON ((-73.8034252650382 -7.112006890477168...</td>
       <td>62</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
@@ -937,6 +942,7 @@ df_grid_perState
       <td>TOCANTINS</td>
       <td>POLYGON ((-50.22519403920089 -9.84157763020462...</td>
       <td>11</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>5</th>
@@ -944,6 +950,7 @@ df_grid_perState
       <td>b'MARANH\xc3O'</td>
       <td>POLYGON ((-48.75552863774982 -5.34957275673850...</td>
       <td>15</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>6</th>
@@ -951,6 +958,7 @@ df_grid_perState
       <td>MATO GROSSO</td>
       <td>POLYGON ((-61.58341167071828 -8.79909488810787...</td>
       <td>38</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>7</th>
@@ -958,6 +966,7 @@ df_grid_perState
       <td>RORAIMA</td>
       <td>POLYGON ((-63.37277878441854 2.211372310513946...</td>
       <td>11</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>8</th>
@@ -965,6 +974,7 @@ df_grid_perState
       <td>b'PAR\xc1'</td>
       <td>POLYGON ((-58.89592617252967 1.227324906244945...</td>
       <td>47</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1277,7 +1287,7 @@ for i, tile in S2_zones_intersection.iterrows():
         g.add_to(m)
             
 folium.LayerControl().add_to(m)
-m.save('Data/Sentinel2_granule_zones/tiles_perState.html')
+m.save('Output/S2Tiles_perState.html')
 #m
 ```
 
@@ -1327,7 +1337,7 @@ df_grid_perState
       <td>11</td>
       <td>b'Rond\xf4nia'</td>
       <td>POLYGON ((-60.70872435793023 -13.6933369594173...</td>
-      <td>20</td>
+      <td>10</td>
       <td>26</td>
     </tr>
     <tr>
@@ -1335,7 +1345,7 @@ df_grid_perState
       <td>12</td>
       <td>ACRE</td>
       <td>POLYGON ((-66.80690861022219 -9.81492014010332...</td>
-      <td>16</td>
+      <td>8</td>
       <td>18</td>
     </tr>
     <tr>
@@ -1343,7 +1353,7 @@ df_grid_perState
       <td>16</td>
       <td>b'AMAP\xc1'</td>
       <td>POLYGON ((-54.87266013107782 2.433385649611453...</td>
-      <td>12</td>
+      <td>6</td>
       <td>17</td>
     </tr>
     <tr>
@@ -1351,7 +1361,7 @@ df_grid_perState
       <td>13</td>
       <td>AMAZONAS</td>
       <td>POLYGON ((-73.8034252650382 -7.112006890477168...</td>
-      <td>124</td>
+      <td>62</td>
       <td>174</td>
     </tr>
     <tr>
@@ -1359,7 +1369,7 @@ df_grid_perState
       <td>17</td>
       <td>TOCANTINS</td>
       <td>POLYGON ((-50.22519403920089 -9.84157763020462...</td>
-      <td>22</td>
+      <td>11</td>
       <td>35</td>
     </tr>
     <tr>
@@ -1367,7 +1377,7 @@ df_grid_perState
       <td>21</td>
       <td>b'MARANH\xc3O'</td>
       <td>POLYGON ((-48.75552863774982 -5.34957275673850...</td>
-      <td>30</td>
+      <td>15</td>
       <td>40</td>
     </tr>
     <tr>
@@ -1375,7 +1385,7 @@ df_grid_perState
       <td>51</td>
       <td>MATO GROSSO</td>
       <td>POLYGON ((-61.58341167071828 -8.79909488810787...</td>
-      <td>76</td>
+      <td>38</td>
       <td>102</td>
     </tr>
     <tr>
@@ -1383,7 +1393,7 @@ df_grid_perState
       <td>14</td>
       <td>RORAIMA</td>
       <td>POLYGON ((-63.37277878441854 2.211372310513946...</td>
-      <td>22</td>
+      <td>11</td>
       <td>30</td>
     </tr>
     <tr>
@@ -1391,7 +1401,7 @@ df_grid_perState
       <td>15</td>
       <td>b'PAR\xc1'</td>
       <td>POLYGON ((-58.89592617252967 1.227324906244945...</td>
-      <td>94</td>
+      <td>47</td>
       <td>137</td>
     </tr>
   </tbody>
