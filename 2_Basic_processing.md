@@ -61,23 +61,35 @@ raw_data#.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>UTMZone</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -548,12 +560,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177653</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWP</td>
+      <td>21MWP</td>
       <td>8.2695</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -563,12 +575,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177654</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXM</td>
+      <td>21MXM</td>
       <td>71.5078</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -578,12 +590,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177655</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVP</td>
+      <td>21MVP</td>
       <td>9.4894</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -593,12 +605,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177656</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVM</td>
+      <td>21MVM</td>
       <td>23.7708</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -608,12 +620,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177657</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MUP</td>
+      <td>21MUP</td>
       <td>44.9922</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -623,12 +635,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177658</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MUN</td>
+      <td>21MUN</td>
       <td>48.1419</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -638,12 +650,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177659</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MUM</td>
+      <td>21MUM</td>
       <td>11.8060</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -653,12 +665,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177660</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWM</td>
+      <td>21MWM</td>
       <td>48.0121</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -668,12 +680,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177661</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXN</td>
+      <td>21MXN</td>
       <td>47.3968</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -683,12 +695,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177662</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXP</td>
+      <td>21MXP</td>
       <td>48.0832</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -698,12 +710,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177663</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWN</td>
+      <td>21MWN</td>
       <td>39.6626</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -713,12 +725,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177664</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KUB</td>
+      <td>21KUB</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -728,12 +740,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177665</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T20KQG</td>
+      <td>20KQG</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>20S</td>
@@ -743,12 +755,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177666</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T20KRG</td>
+      <td>20KRG</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>20S</td>
@@ -758,12 +770,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177667</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KTB</td>
+      <td>21KTB</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -773,12 +785,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177668</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KUA</td>
+      <td>21KUA</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -788,12 +800,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177669</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KVB</td>
+      <td>21KVB</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -803,12 +815,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177670</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MYU</td>
+      <td>21MYU</td>
       <td>0.2791</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -818,12 +830,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177671</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWT</td>
+      <td>21MWT</td>
       <td>3.0382</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -833,12 +845,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177672</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MZV</td>
+      <td>21MZV</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -848,12 +860,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177673</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWV</td>
+      <td>21MWV</td>
       <td>44.3405</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -863,12 +875,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177674</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXV</td>
+      <td>21MXV</td>
       <td>9.5568</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -878,12 +890,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177675</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXT</td>
+      <td>21MXT</td>
       <td>2.3223</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -893,12 +905,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177676</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXU</td>
+      <td>21MXU</td>
       <td>1.2880</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -908,12 +920,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177677</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MYT</td>
+      <td>21MYT</td>
       <td>3.1379</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -923,12 +935,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177678</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWU</td>
+      <td>21MWU</td>
       <td>10.2529</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -938,12 +950,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177679</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVV</td>
+      <td>21MVV</td>
       <td>44.8977</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -953,12 +965,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177680</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVU</td>
+      <td>21MVU</td>
       <td>18.1768</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -968,12 +980,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177681</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MYV</td>
+      <td>21MYV</td>
       <td>34.5259</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -983,12 +995,12 @@ raw_data#.head()
     </tr>
     <tr>
       <th>177682</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>SENTINEL-2A</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVT</td>
+      <td>21MVT</td>
       <td>5.5611</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -1034,10 +1046,9 @@ tidy_data.columns
 
 
 
-    Index(['Product ID', 'Acquisition Date', 'Platform', 'WRS Path', 'WRS Row',
-           'Tile Number', 'Cloud cover', 'Datum', 'UTM Zone',
-           'Spatial Resolution - Pan', 'Spatial Resolution - Refletive',
-           'Spatial Resolution - Thermal'],
+    Index(['ProductID', 'AcquisitionDate', 'Platform', 'WRSPath', 'WRSRow',
+           'TileNumber', 'CloudCover', 'Datum', 'UTMZone', 'SpatialRes_Pan',
+           'SpatialRes_Refletive', 'SpatialRes_Thermal'],
           dtype='object')
 
 
@@ -1050,7 +1061,7 @@ Observe that some data present negative cloud cover. *These observations will be
 
 
 ```python
-tidy_data["Cloud cover"].describe()
+tidy_data["CloudCover"].describe()
 ```
 
 
@@ -1064,7 +1075,7 @@ tidy_data["Cloud cover"].describe()
     50%          49.936100
     75%          87.789700
     max         100.000000
-    Name: Cloud cover, dtype: float64
+    Name: CloudCover, dtype: float64
 
 
 
@@ -1089,7 +1100,7 @@ ax.spines['right'].set_visible(False)
 plt.grid(linestyle="dashed", axis="y")
 
 # data normalization
-out = pd.cut(tidy_data["Cloud cover"], bins=[-100, -1, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], include_lowest=False)
+out = pd.cut(tidy_data["CloudCover"], bins=[-100, -1, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], include_lowest=False)
 out_norm = out.value_counts(sort=False, normalize=True).mul(100)
 ax = out_norm.plot.bar(rot=0, color="gray", figsize=(14,8) )
 
@@ -1124,7 +1135,7 @@ plt.show()
 
 ```python
 # Get the name of indexes for which column "Cloud cover" has negative values
-index_delete = tidy_data[tidy_data["Cloud cover"] < 0].index
+index_delete = tidy_data[tidy_data["CloudCover"] < 0].index
 
 
 
@@ -1150,7 +1161,7 @@ print("\nNew structure of the dataframe: ", tidy_data.shape)
 
 
 ```python
-tidy_data["Cloud cover"].describe()
+tidy_data["CloudCover"].describe()
 ```
 
 
@@ -1164,7 +1175,7 @@ tidy_data["Cloud cover"].describe()
     50%          50.013650
     75%          87.816550
     max         100.000000
-    Name: Cloud cover, dtype: float64
+    Name: CloudCover, dtype: float64
 
 
 
@@ -1189,7 +1200,7 @@ ax.spines['right'].set_visible(False)
 plt.grid(linestyle="dashed", axis="y")
 
 # data normalization
-out = pd.cut(tidy_data["Cloud cover"], bins=[-100, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], include_lowest=False)
+out = pd.cut(tidy_data["CloudCover"], bins=[-100, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], include_lowest=False)
 out_norm = out.value_counts(sort=False, normalize=True).mul(100)
 ax = out_norm.plot.bar(rot=0, color="gray", figsize=(14,8) )
 
@@ -1245,21 +1256,21 @@ Here, I created a column named "Catalog system" to describe the system related t
 
 ```python
 # Creates the new column
-tidy_data.insert(3, "Catalog system", None, allow_duplicates=False)
+tidy_data.insert(3, "CatalogSystem", None, allow_duplicates=False)
 ```
 
 
 ```python
 # Attributes the data
-tidy_data.loc[tidy_data["Platform"] == "L8", "Catalog system"] = "WRS"
-tidy_data.loc[tidy_data["Platform"] == "S2A", "Catalog system"] = "Tile"
-tidy_data.loc[tidy_data["Platform"] == "S2B", "Catalog system"] = "Tile"
+tidy_data.loc[tidy_data["Platform"] == "L8", "CatalogSystem"] = "WRS"
+tidy_data.loc[tidy_data["Platform"] == "S2A", "CatalogSystem"] = "Tile"
+tidy_data.loc[tidy_data["Platform"] == "S2B", "CatalogSystem"] = "Tile"
 ```
 
 
 ```python
 # Converts to categorical type
-tidy_data["Catalog system"] = tidy_data["Catalog system"].astype('category')
+tidy_data["CatalogSystem"] = tidy_data["CatalogSystem"].astype('category')
 tidy_data.head()
 ```
 
@@ -1267,24 +1278,36 @@ tidy_data.head()
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>Catalog system</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>CatalogSystem</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>UTMZone</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -1393,20 +1416,20 @@ tidy_data.insert(10, "Hemisphere", None, allow_duplicates=False)
 
 ```python
 # Attributes the hemispher identifier to the new column
-tidy_data.loc[tidy_data["Platform"] == "S2A", "Hemisphere"] = tidy_data["UTM Zone"].str[-1]
-tidy_data.loc[tidy_data["Platform"] == "S2B", "Hemisphere"] = tidy_data["UTM Zone"].str[-1]
+tidy_data.loc[tidy_data["Platform"] == "S2A", "Hemisphere"] = tidy_data["UTMZone"].str[-1]
+tidy_data.loc[tidy_data["Platform"] == "S2B", "Hemisphere"] = tidy_data["UTMZone"].str[-1]
 
 # Removes the hemispher identifier from the column "UTM Zone"
-tidy_data.loc[tidy_data["Platform"] == "S2A", "UTM Zone"] = tidy_data["UTM Zone"].str[:-1]
-tidy_data.loc[tidy_data["Platform"] == "S2B", "UTM Zone"] = tidy_data["UTM Zone"].str[:-1]
+tidy_data.loc[tidy_data["Platform"] == "S2A", "UTMZone"] = tidy_data["UTMZone"].str[:-1]
+tidy_data.loc[tidy_data["Platform"] == "S2B", "UTMZone"] = tidy_data["UTMZone"].str[:-1]
 ```
 
 ###### Landsat-8
 
 
 ```python
-tidy_data.loc[(tidy_data["Platform"] == "L8") & (tidy_data["WRS Row"] <= 60), "Hemisphere"] = "N"
-tidy_data.loc[(tidy_data["Platform"] == "L8") & (tidy_data["WRS Row"] > 60), "Hemisphere"] = "S"
+tidy_data.loc[(tidy_data["Platform"] == "L8") & (tidy_data["WRSRow"] <= 60), "Hemisphere"] = "N"
+tidy_data.loc[(tidy_data["Platform"] == "L8") & (tidy_data["WRSRow"] > 60), "Hemisphere"] = "S"
 ```
 
 
@@ -1418,25 +1441,37 @@ tidy_data
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>Catalog system</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>CatalogSystem</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
+      <th>UTMZone</th>
       <th>Hemisphere</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -1969,13 +2004,13 @@ tidy_data
     </tr>
     <tr>
       <th>177653</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWP</td>
+      <td>21MWP</td>
       <td>8.2695</td>
       <td>WGS84</td>
       <td>21</td>
@@ -1986,13 +2021,13 @@ tidy_data
     </tr>
     <tr>
       <th>177654</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXM</td>
+      <td>21MXM</td>
       <td>71.5078</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2003,13 +2038,13 @@ tidy_data
     </tr>
     <tr>
       <th>177655</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVP</td>
+      <td>21MVP</td>
       <td>9.4894</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2020,13 +2055,13 @@ tidy_data
     </tr>
     <tr>
       <th>177656</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVM</td>
+      <td>21MVM</td>
       <td>23.7708</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2037,13 +2072,13 @@ tidy_data
     </tr>
     <tr>
       <th>177657</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MUP</td>
+      <td>21MUP</td>
       <td>44.9922</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2054,13 +2089,13 @@ tidy_data
     </tr>
     <tr>
       <th>177658</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MUN</td>
+      <td>21MUN</td>
       <td>48.1419</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2071,13 +2106,13 @@ tidy_data
     </tr>
     <tr>
       <th>177659</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MUM</td>
+      <td>21MUM</td>
       <td>11.8060</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2088,13 +2123,13 @@ tidy_data
     </tr>
     <tr>
       <th>177660</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWM</td>
+      <td>21MWM</td>
       <td>48.0121</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2105,13 +2140,13 @@ tidy_data
     </tr>
     <tr>
       <th>177661</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXN</td>
+      <td>21MXN</td>
       <td>47.3968</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2122,13 +2157,13 @@ tidy_data
     </tr>
     <tr>
       <th>177662</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXP</td>
+      <td>21MXP</td>
       <td>48.0832</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2139,13 +2174,13 @@ tidy_data
     </tr>
     <tr>
       <th>177663</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T132253_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWN</td>
+      <td>21MWN</td>
       <td>39.6626</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2156,13 +2191,13 @@ tidy_data
     </tr>
     <tr>
       <th>177664</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KUB</td>
+      <td>21KUB</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2173,13 +2208,13 @@ tidy_data
     </tr>
     <tr>
       <th>177665</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T20KQG</td>
+      <td>20KQG</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>20</td>
@@ -2190,13 +2225,13 @@ tidy_data
     </tr>
     <tr>
       <th>177666</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T20KRG</td>
+      <td>20KRG</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>20</td>
@@ -2207,13 +2242,13 @@ tidy_data
     </tr>
     <tr>
       <th>177667</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KTB</td>
+      <td>21KTB</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2224,13 +2259,13 @@ tidy_data
     </tr>
     <tr>
       <th>177668</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KUA</td>
+      <td>21KUA</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2241,13 +2276,13 @@ tidy_data
     </tr>
     <tr>
       <th>177669</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170122T031711_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21KVB</td>
+      <td>21KVB</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2258,13 +2293,13 @@ tidy_data
     </tr>
     <tr>
       <th>177670</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MYU</td>
+      <td>21MYU</td>
       <td>0.2791</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2275,13 +2310,13 @@ tidy_data
     </tr>
     <tr>
       <th>177671</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWT</td>
+      <td>21MWT</td>
       <td>3.0382</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2292,13 +2327,13 @@ tidy_data
     </tr>
     <tr>
       <th>177672</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MZV</td>
+      <td>21MZV</td>
       <td>0.0000</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2309,13 +2344,13 @@ tidy_data
     </tr>
     <tr>
       <th>177673</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWV</td>
+      <td>21MWV</td>
       <td>44.3405</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2326,13 +2361,13 @@ tidy_data
     </tr>
     <tr>
       <th>177674</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXV</td>
+      <td>21MXV</td>
       <td>9.5568</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2343,13 +2378,13 @@ tidy_data
     </tr>
     <tr>
       <th>177675</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXT</td>
+      <td>21MXT</td>
       <td>2.3223</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2360,13 +2395,13 @@ tidy_data
     </tr>
     <tr>
       <th>177676</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MXU</td>
+      <td>21MXU</td>
       <td>1.2880</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2377,13 +2412,13 @@ tidy_data
     </tr>
     <tr>
       <th>177677</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MYT</td>
+      <td>21MYT</td>
       <td>3.1379</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2394,13 +2429,13 @@ tidy_data
     </tr>
     <tr>
       <th>177678</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MWU</td>
+      <td>21MWU</td>
       <td>10.2529</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2411,13 +2446,13 @@ tidy_data
     </tr>
     <tr>
       <th>177679</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVV</td>
+      <td>21MVV</td>
       <td>44.8977</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2428,13 +2463,13 @@ tidy_data
     </tr>
     <tr>
       <th>177680</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVU</td>
+      <td>21MVU</td>
       <td>18.1768</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2445,13 +2480,13 @@ tidy_data
     </tr>
     <tr>
       <th>177681</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MYV</td>
+      <td>21MYV</td>
       <td>34.5259</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2462,13 +2497,13 @@ tidy_data
     </tr>
     <tr>
       <th>177682</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20170121T211720_R110_...</td>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
       <td>2015-08-19</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVT</td>
+      <td>21MVT</td>
       <td>5.5611</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2514,25 +2549,37 @@ tidy_data.describe(include='all')
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>Catalog system</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>CatalogSystem</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
+      <th>UTMZone</th>
       <th>Hemisphere</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -2555,7 +2602,7 @@ tidy_data.describe(include='all')
     </tr>
     <tr>
       <th>unique</th>
-      <td>165942</td>
+      <td>177500</td>
       <td>3524</td>
       <td>3</td>
       <td>2</td>
@@ -2572,13 +2619,13 @@ tidy_data.describe(include='all')
     </tr>
     <tr>
       <th>top</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20160308T165226_R096_...</td>
+      <td>L1C_T21LUC_A020985_20190629T141051</td>
       <td>2019-04-10</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVR</td>
+      <td>21MVR</td>
       <td>NaN</td>
       <td>WGS84</td>
       <td>21</td>
@@ -2589,7 +2636,7 @@ tidy_data.describe(include='all')
     </tr>
     <tr>
       <th>freq</th>
-      <td>21</td>
+      <td>1</td>
       <td>224</td>
       <td>87444</td>
       <td>142994</td>
@@ -2740,25 +2787,37 @@ tidy_data[tidy_data["Platform"] == "L8"].describe(include='all')
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>Catalog system</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>CatalogSystem</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
+      <th>UTMZone</th>
       <th>Hemisphere</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -2798,8 +2857,8 @@ tidy_data[tidy_data["Platform"] == "L8"].describe(include='all')
     </tr>
     <tr>
       <th>top</th>
-      <td>LC08_L1TP_003064_20130807_20180129_01_T1</td>
-      <td>2019/02/04</td>
+      <td>LC08_L1GT_005059_20190705_20190719_01_T2</td>
+      <td>2019/03/08</td>
       <td>L8</td>
       <td>WRS</td>
       <td>NaN</td>
@@ -2966,25 +3025,37 @@ tidy_data[(tidy_data["Platform"] == "S2A") | (tidy_data["Platform"] == "S2B")].d
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>Catalog system</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>CatalogSystem</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
+      <th>UTMZone</th>
       <th>Hemisphere</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -3007,7 +3078,7 @@ tidy_data[(tidy_data["Platform"] == "S2A") | (tidy_data["Platform"] == "S2B")].d
     </tr>
     <tr>
       <th>unique</th>
-      <td>131436</td>
+      <td>142994</td>
       <td>1216</td>
       <td>2</td>
       <td>1</td>
@@ -3024,13 +3095,13 @@ tidy_data[(tidy_data["Platform"] == "S2A") | (tidy_data["Platform"] == "S2B")].d
     </tr>
     <tr>
       <th>top</th>
-      <td>S2A_OPER_PRD_MSIL1C_PDMC_20160308T165226_R096_...</td>
+      <td>L1C_T21LUC_A020985_20190629T141051</td>
       <td>2019-04-10</td>
       <td>S2A</td>
       <td>Tile</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>T21MVR</td>
+      <td>21MVR</td>
       <td>NaN</td>
       <td>WGS84</td>
       <td>21</td>
@@ -3041,7 +3112,7 @@ tidy_data[(tidy_data["Platform"] == "S2A") | (tidy_data["Platform"] == "S2B")].d
     </tr>
     <tr>
       <th>freq</th>
-      <td>21</td>
+      <td>1</td>
       <td>224</td>
       <td>87444</td>
       <td>142994</td>

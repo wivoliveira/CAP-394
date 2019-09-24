@@ -116,7 +116,19 @@ L8_archive.head(5)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -587,7 +599,19 @@ S2_archive.head(5)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -976,9 +1000,9 @@ The original metadata archives do not follow the same structure. Therefore, it i
 import numpy as np
 import pandas as pd
 # Header of the new dataframe
-header = np.array(['Product ID', 'Acquisition Date', 'Platform', 'WRS Path', 
-                   'WRS Row', 'Tile Number', 'Cloud cover', 'Datum', 
-                   'UTM Zone', 'Spatial Resolution - Pan', 'Spatial Resolution - Refletive', 'Spatial Resolution - Thermal'])
+header = np.array(['ProductID', 'AcquisitionDate', 'Platform', 'WRSPath', 
+                   'WRSRow', 'TileNumber', 'CloudCover', 'Datum', 
+                   'UTMZone', 'SpatialRes_Pan', 'SpatialRes_Refletive', 'SpatialRes_Thermal'])
                   
 # Dataframe, composed only by the header
 df = pd.DataFrame(columns=list(header))
@@ -989,23 +1013,35 @@ df
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>UTMZone</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -1029,18 +1065,18 @@ L8_dict = {}
 
 for index, row in L8_archive.iterrows():
     L8_dict[index] = {
-        "Product ID": row["Landsat Product Identifier"], 
-        "Acquisition Date": row['Acquisition Date'],
+        "ProductID": row["Landsat Product Identifier"], 
+        "AcquisitionDate": row['Acquisition Date'],
         "Platform": 'Landsat-8',
-        "WRS Path": row['WRS Path'],
-        "WRS Row": row['WRS Row'],
-        "Tile Number": None,
-        "Cloud cover": row['Land Cloud Cover'],
+        "WRSPath": row['WRS Path'],
+        "WRSRow": row['WRS Row'],
+        "TileNumber": None,
+        "CloudCover": row['Land Cloud Cover'],
         "Datum": row['Datum'],
-        "UTM Zone": row['UTM Zone'],
-        "Spatial Resolution - Pan": row['Grid Cell Size Panchromatic'],
-        "Spatial Resolution - Refletive": row['Grid Cell Size Reflective'],
-        "Spatial Resolution - Thermal": row['Grid Cell Size Thermal']
+        "UTMZone": row['UTM Zone'],
+        "SpatialRes_Pan": row['Grid Cell Size Panchromatic'],
+        "SpatialRes_Refletive": row['Grid Cell Size Reflective'],
+        "SpatialRes_Thermal": row['Grid Cell Size Thermal']
     }
 ```
 
@@ -1054,23 +1090,35 @@ L8_df.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>UTMZone</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
@@ -1232,6 +1280,8 @@ L8_df.head(10)
 
 ##### Sentinel-2/MSI
 
+Note that we removed the first character of all data related to the column 'Tile Number'. The 'Tile Number' data iniciate with the letter 'T', which refers to the word 'Tile'. However, this character is not part of the tile identification.
+
 
 ```python
 from datetime import datetime
@@ -1240,18 +1290,18 @@ S2_dict = {}
 
 for index, row in S2_archive.iterrows():
     S2_dict[index] = {
-        "Product ID": row['Vendor Product ID'], 
-        "Acquisition Date": datetime.strptime(row['Acquisition End Date'][0:10], '%Y-%m-%d').date(),
+        "ProductID": row['Vendor Tile ID'], 
+        "AcquisitionDate": datetime.strptime(row['Acquisition End Date'][0:10], '%Y-%m-%d').date(),
         "Platform": row['Platform'],
-        "WRS Path": None,
-        "WRS Row": None,
-        "Tile Number": row['Tile Number'],
-        "Cloud cover": row['Cloud Cover'],
+        "WRSPath": None,
+        "WRSRow": None,
+        "TileNumber": row['Tile Number'][1:],
+        "CloudCover": row['Cloud Cover'],
         "Datum": row['Datum'],
-        "UTM Zone": row['UTM Zone'],
-        "Spatial Resolution - Pan": row['Resolution'][0:2],
-        "Spatial Resolution - Refletive": row['Resolution'][4:6],
-        "Spatial Resolution - Thermal": row['Resolution'][8:10]
+        "UTMZone": row['UTM Zone'],
+        "SpatialRes_Pan": row['Resolution'][0:2],
+        "SpatialRes_Refletive": row['Resolution'][4:6],
+        "SpatialRes_Thermal": row['Resolution'][8:10]
     }
 ```
 
@@ -1265,34 +1315,46 @@ S2_df.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Product ID</th>
-      <th>Acquisition Date</th>
+      <th>ProductID</th>
+      <th>AcquisitionDate</th>
       <th>Platform</th>
-      <th>WRS Path</th>
-      <th>WRS Row</th>
-      <th>Tile Number</th>
-      <th>Cloud cover</th>
+      <th>WRSPath</th>
+      <th>WRSRow</th>
+      <th>TileNumber</th>
+      <th>CloudCover</th>
       <th>Datum</th>
-      <th>UTM Zone</th>
-      <th>Spatial Resolution - Pan</th>
-      <th>Spatial Resolution - Refletive</th>
-      <th>Spatial Resolution - Thermal</th>
+      <th>UTMZone</th>
+      <th>SpatialRes_Pan</th>
+      <th>SpatialRes_Refletive</th>
+      <th>SpatialRes_Thermal</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21MXN_2...</td>
+      <td>L1C_T21MXN_A012534_20190731T140100</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2B</td>
       <td>None</td>
       <td>None</td>
-      <td>T21MXN</td>
+      <td>21MXN</td>
       <td>0</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -1302,12 +1364,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>1</th>
-      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21LYF_2...</td>
+      <td>L1C_T21LYF_A012534_20190731T140426</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2B</td>
       <td>None</td>
       <td>None</td>
-      <td>T21LYF</td>
+      <td>21LYF</td>
       <td>0</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -1317,12 +1379,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>2</th>
-      <td>S2A_MSIL1C_20190731T131251_N0208_R138_T23MQQ_2...</td>
+      <td>L1C_T23MQQ_A021442_20190731T131247</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2A</td>
       <td>None</td>
       <td>None</td>
-      <td>T23MQQ</td>
+      <td>23MQQ</td>
       <td>.0106</td>
       <td>WGS84</td>
       <td>23S</td>
@@ -1332,12 +1394,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>3</th>
-      <td>S2A_MSIL1C_20190731T144741_N0208_R139_T19LDJ_2...</td>
+      <td>L1C_T19LDJ_A021443_20190731T144736</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2A</td>
       <td>None</td>
       <td>None</td>
-      <td>T19LDJ</td>
+      <td>19LDJ</td>
       <td>0</td>
       <td>WGS84</td>
       <td>19S</td>
@@ -1347,12 +1409,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>4</th>
-      <td>S2A_MSIL1C_20190731T131251_N0208_R138_T23MQR_2...</td>
+      <td>L1C_T23MQR_A021442_20190731T131247</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2A</td>
       <td>None</td>
       <td>None</td>
-      <td>T23MQR</td>
+      <td>23MQR</td>
       <td>.4756</td>
       <td>WGS84</td>
       <td>23S</td>
@@ -1362,12 +1424,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>5</th>
-      <td>S2A_MSIL1C_20190731T144741_N0208_R139_T19LDL_2...</td>
+      <td>L1C_T19LDL_A021443_20190731T144736</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2A</td>
       <td>None</td>
       <td>None</td>
-      <td>T19LDL</td>
+      <td>19LDL</td>
       <td>0</td>
       <td>WGS84</td>
       <td>19S</td>
@@ -1377,12 +1439,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>6</th>
-      <td>S2A_MSIL1C_20190731T144741_N0208_R139_T19LDH_2...</td>
+      <td>L1C_T19LDH_A021443_20190731T144736</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2A</td>
       <td>None</td>
       <td>None</td>
-      <td>T19LDH</td>
+      <td>19LDH</td>
       <td>0</td>
       <td>WGS84</td>
       <td>19S</td>
@@ -1392,12 +1454,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>7</th>
-      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T22NDF_2...</td>
+      <td>L1C_T22NDF_A012534_20190731T140100</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2B</td>
       <td>None</td>
       <td>None</td>
-      <td>T22NDF</td>
+      <td>22NDF</td>
       <td>24.4119</td>
       <td>WGS84</td>
       <td>22N</td>
@@ -1407,12 +1469,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>8</th>
-      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21MXP_2...</td>
+      <td>L1C_T21MXP_A012534_20190731T140426</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2B</td>
       <td>None</td>
       <td>None</td>
-      <td>T21MXP</td>
+      <td>21MXP</td>
       <td>0</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -1422,12 +1484,12 @@ S2_df.head(10)
     </tr>
     <tr>
       <th>9</th>
-      <td>S2B_MSIL1C_20190731T140059_N0208_R067_T21MZS_2...</td>
+      <td>L1C_T21MZS_A012534_20190731T140100</td>
       <td>2019-07-31</td>
       <td>SENTINEL-2B</td>
       <td>None</td>
       <td>None</td>
-      <td>T21MZS</td>
+      <td>21MZS</td>
       <td>3.1434</td>
       <td>WGS84</td>
       <td>21S</td>
@@ -1496,7 +1558,7 @@ In addition, the following data ca also be useful:
 1. What is the monthly average percentage of cloud cover observed for each region?
 1. Which regions are more affected by cloud cover?
 1. Which state did present the lowest annual cloud cover rate?
-1. Do the regions that are more affected by cloud cover present the highest deforastation rates?
+1. Do regions that are more affected by cloud cover present the highest deforastation rates? (????? deforastation data)
 1. What is the mean cloud covarage observed in each season of the year?
 1. What is the percentage of scenes free of cloud in each region?
 
