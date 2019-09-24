@@ -54,7 +54,19 @@ wrs.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -266,9 +278,16 @@ for i, row in wrs_intersection.iterrows():
     g.add_to(m)
 
 folium.LayerControl().add_to(m)
-m.save('Data/wrs2/wrs.html')
+#m.save('Data/wrs2/wrs.html')
 #m
 ```
+
+
+
+
+    <folium.map.LayerControl at 0x274696fa9e8>
+
+
 
 Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github.
 <p align="center"><img src="./images/LandsatGrids.PNG" width="100%"></p>
@@ -301,7 +320,19 @@ S2_zones.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -426,9 +457,16 @@ for i, tile in S2_zones_intersection.iterrows():
     g.add_to(m)
 
 folium.LayerControl().add_to(m)
-m.save('Data/Sentinel2_granule_zones/tiles.html')
+#m.save('Data/Sentinel2_granule_zones/tiles.html')
 #m
 ```
+
+
+
+
+    <folium.map.LayerControl at 0x274697439e8>
+
+
 
 Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github.
 <p align="center"><img src="./images/SentinelTiles.PNG" width="100%"></p>
@@ -457,7 +495,19 @@ BR_Amazon_Estates
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -694,11 +744,6 @@ area_threshold = 15
 
 
 ```python
-wrs_intersection = wrs[wrs.intersects(bounding_box_AM)]
-```
-
-
-```python
 df_grid_perState = gpd.GeoDataFrame()
 df_grid_perState['GEOCODIGO'] = BR_Amazon_Estates.GEOCODIGO
 df_grid_perState['NOME'] = BR_Amazon_Estates.NOME
@@ -706,12 +751,16 @@ df_grid_perState['geometry'] = BR_Amazon_Estates.geometry
 df_grid_perState['Number_L8_grids'] = 0
 df_grid_perState['Number_S2_grids'] = 0
 
+wrs_intersection = wrs[wrs.intersects(bounding_box_AM)]
+
 df_wrs = gpd.GeoDataFrame()
 df_wrs['PATH'] = wrs_intersection.PATH
 df_wrs['ROW'] = wrs_intersection.ROW
 df_wrs['geometry'] = wrs_intersection.geometry
 df_wrs['STATE'] = "None"
 df_wrs['STATE_GEOCODE'] = "None"
+
+S2_zones_intersection = S2_zones[S2_zones.intersects(bounding_box_AM)]
 
 df_S2_zones = gpd.GeoDataFrame()
 df_S2_zones['NAME'] = S2_zones_intersection.Name
@@ -822,7 +871,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0xcb64cfa2b0>
+    <folium.map.LayerControl at 0x27469745e10>
 
 
 
@@ -838,7 +887,19 @@ df_grid_perState
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -940,7 +1001,19 @@ df_wrs.head(20)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1129,6 +1202,7 @@ print("There are ", len(a), " WRS grids that do not present at least ", area_thr
     There are  26  WRS grids that do not present at least  15 % of their area covering the area of interest.
     
 
+***
 Now, we repeat the above procedures for the Sentinel-2 data.
 
 
@@ -1166,7 +1240,7 @@ for i, tile in S2_zones_intersection.iterrows():
     if (estado_pertence_perc >= area_threshold): # At least 15% of the grid must cover the analysed area in order
                                             # to be considered in this analysis
         # Create a string for the name containing the name of this Polygon
-        name = 'tile: %s, perc. no estado: %f' % (tile.Name, estado_pertence_perc)
+        name = 'tile: %s, perc. no estado: %f' % (tile.Name, estado_pertence_perc) 
         
         # Create the folium geometry of this Polygon 
         if (estado_pertence == "11"): # Rondônia
@@ -1216,6 +1290,7 @@ for i, tile in S2_zones_intersection.iterrows():
             g = folium.GeoJson(tile.geometry.__geo_interface__, name=name, style_function=lambda y: {'color': 'green'})
         else: # Apenas por garantia, provavelmente não será necessário. 
             g = folium.GeoJson(tile.geometry.__geo_interface__, name=name, style_function=lambda y: {'color': 'black'})
+        
         # Add a folium Popup object with the name string
         g.add_child(folium.Popup(name))
         # Add the object to the map
@@ -1229,7 +1304,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0xcb64b9a8d0>
+    <folium.map.LayerControl at 0x2746993d940>
 
 
 
@@ -1249,7 +1324,19 @@ df_grid_perState
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1351,7 +1438,19 @@ df_S2_zones.head(629)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1807,7 +1906,7 @@ print("There are ", len(a), "granule zones that do not present at least ", area_
     There are  50 granule zones that do not present at least  15 % of their area covering the area of interest.
     
 
-## Analysis of the cloud cover data
+## Updates to the dity data
 
 
 ### Loading the tidy data
@@ -1826,7 +1925,9 @@ except Exception as e:
     The file was read!
     
 
-First, we include the identification of the Brazilian state related to each row in this dataframe.
+Before we started the analysis of the cloud cover data, we included the identification of the Brazilian state related to each row in this dataframe. After this procedure, we also removed rows related to data that were not associated with any Brazilian state (tidy_data.STATE equal to "None").
+
+### Including new data and excluding unnecessary rows
 
 
 ```python
@@ -1837,14 +1938,26 @@ tidy_data['STATE_GEOCODE'] = "None"
 
 
 ```python
-tidy_data.head(10)
+tidy_data.head(5)
 ```
 
 
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1963,101 +2076,6 @@ tidy_data.head(10)
       <td>None</td>
       <td>None</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>LC08_L1TP_228063_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>63.0</td>
-      <td>NaN</td>
-      <td>0.10</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>LC08_L1TP_228064_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>64.0</td>
-      <td>NaN</td>
-      <td>0.00</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>LC08_L1TP_228065_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>65.0</td>
-      <td>NaN</td>
-      <td>0.80</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>LC08_L1TP_228066_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>66.0</td>
-      <td>NaN</td>
-      <td>3.94</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>LC08_L1TP_228067_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>67.0</td>
-      <td>NaN</td>
-      <td>9.83</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -2066,6 +2084,7 @@ tidy_data.head(10)
 
 
 ```python
+# Include data to the new columns
 #Landsat data
 for i, row in df_wrs.iterrows():
     tidy_data.loc[(tidy_data['WRSPath'] == row.PATH) & (tidy_data['WRSRow'] == row.ROW), ['STATE', 'STATE_GEOCODE']] = [row.STATE, row.STATE_GEOCODE]
@@ -2077,14 +2096,32 @@ for i, tile in df_S2_zones.iterrows():
 
 
 ```python
-tidy_data.head(200000)
+# Excluding unnecessary information
+tidy_data = tidy_data[tidy_data.STATE != "None"]
+```
+
+
+```python
+tidy_data
 ```
 
 
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2108,25 +2145,6 @@ tidy_data.head(200000)
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th>0</th>
-      <td>LC08_L1GT_228058_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>58.0</td>
-      <td>NaN</td>
-      <td>46.8200</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>N</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
     <tr>
       <th>1</th>
       <td>LC08_L1TP_228059_20190731_20190731_01_RT</td>
@@ -2373,44 +2391,6 @@ tidy_data.head(200000)
       <td>30</td>
       <td>MT</td>
       <td>51</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>LC08_L1TP_228072_20190731_20190731_01_RT</td>
-      <td>2019/07/31</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>228.0</td>
-      <td>72.0</td>
-      <td>NaN</td>
-      <td>0.0000</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>LC08_L1TP_004058_20190730_20190730_01_RT</td>
-      <td>2019/07/30</td>
-      <td>L8</td>
-      <td>WRS</td>
-      <td>4.0</td>
-      <td>58.0</td>
-      <td>NaN</td>
-      <td>70.9300</td>
-      <td>WGS84</td>
-      <td>19</td>
-      <td>N</td>
-      <td>15</td>
-      <td>30</td>
-      <td>30</td>
-      <td>None</td>
-      <td>None</td>
     </tr>
     <tr>
       <th>16</th>
@@ -2679,6 +2659,63 @@ tidy_data.head(200000)
       <td>21</td>
     </tr>
     <tr>
+      <th>30</th>
+      <td>LC08_L1TP_221066_20190730_20190730_01_RT</td>
+      <td>2019/07/30</td>
+      <td>L8</td>
+      <td>WRS</td>
+      <td>221.0</td>
+      <td>66.0</td>
+      <td>NaN</td>
+      <td>0.0000</td>
+      <td>WGS84</td>
+      <td>23</td>
+      <td>S</td>
+      <td>15</td>
+      <td>30</td>
+      <td>30</td>
+      <td>MA</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>LC08_L1TP_221067_20190730_20190730_01_RT</td>
+      <td>2019/07/30</td>
+      <td>L8</td>
+      <td>WRS</td>
+      <td>221.0</td>
+      <td>67.0</td>
+      <td>NaN</td>
+      <td>0.1200</td>
+      <td>WGS84</td>
+      <td>23</td>
+      <td>S</td>
+      <td>15</td>
+      <td>30</td>
+      <td>30</td>
+      <td>TO</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>LC08_L1TP_221068_20190730_20190730_01_RT</td>
+      <td>2019/07/30</td>
+      <td>L8</td>
+      <td>WRS</td>
+      <td>221.0</td>
+      <td>68.0</td>
+      <td>NaN</td>
+      <td>0.7100</td>
+      <td>WGS84</td>
+      <td>23</td>
+      <td>S</td>
+      <td>15</td>
+      <td>30</td>
+      <td>30</td>
+      <td>TO</td>
+      <td>17</td>
+    </tr>
+    <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
@@ -2696,6 +2733,82 @@ tidy_data.head(200000)
       <td>...</td>
       <td>...</td>
       <td>...</td>
+    </tr>
+    <tr>
+      <th>177466</th>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
+      <td>2015-08-19</td>
+      <td>S2A</td>
+      <td>Tile</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21LTG</td>
+      <td>0.0000</td>
+      <td>WGS84</td>
+      <td>21</td>
+      <td>S</td>
+      <td>10</td>
+      <td>20</td>
+      <td>60</td>
+      <td>MT</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>177467</th>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
+      <td>2015-08-19</td>
+      <td>S2A</td>
+      <td>Tile</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21LUH</td>
+      <td>40.1783</td>
+      <td>WGS84</td>
+      <td>21</td>
+      <td>S</td>
+      <td>10</td>
+      <td>20</td>
+      <td>60</td>
+      <td>MT</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>177468</th>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
+      <td>2015-08-19</td>
+      <td>S2A</td>
+      <td>Tile</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21LWG</td>
+      <td>0.0000</td>
+      <td>WGS84</td>
+      <td>21</td>
+      <td>S</td>
+      <td>10</td>
+      <td>20</td>
+      <td>60</td>
+      <td>MT</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>177469</th>
+      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
+      <td>2015-08-19</td>
+      <td>S2A</td>
+      <td>Tile</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21MVN</td>
+      <td>31.4895</td>
+      <td>WGS84</td>
+      <td>21</td>
+      <td>S</td>
+      <td>10</td>
+      <td>20</td>
+      <td>60</td>
+      <td>PA</td>
+      <td>15</td>
     </tr>
     <tr>
       <th>177470</th>
@@ -2924,82 +3037,6 @@ tidy_data.head(200000)
       <td>60</td>
       <td>MT</td>
       <td>51</td>
-    </tr>
-    <tr>
-      <th>177482</th>
-      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
-      <td>2015-08-19</td>
-      <td>S2A</td>
-      <td>Tile</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20KQG</td>
-      <td>0.0000</td>
-      <td>WGS84</td>
-      <td>20</td>
-      <td>S</td>
-      <td>10</td>
-      <td>20</td>
-      <td>60</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>177483</th>
-      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
-      <td>2015-08-19</td>
-      <td>S2A</td>
-      <td>Tile</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20KRG</td>
-      <td>0.0000</td>
-      <td>WGS84</td>
-      <td>20</td>
-      <td>S</td>
-      <td>10</td>
-      <td>20</td>
-      <td>60</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>177484</th>
-      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
-      <td>2015-08-19</td>
-      <td>S2A</td>
-      <td>Tile</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>21KTB</td>
-      <td>0.0000</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>10</td>
-      <td>20</td>
-      <td>60</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>177485</th>
-      <td>S2A_OPER_MSI_L1C_TL_EPA__20160928T053642_A0008...</td>
-      <td>2015-08-19</td>
-      <td>S2A</td>
-      <td>Tile</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>21KUA</td>
-      <td>0.0000</td>
-      <td>WGS84</td>
-      <td>21</td>
-      <td>S</td>
-      <td>10</td>
-      <td>20</td>
-      <td>60</td>
-      <td>None</td>
-      <td>None</td>
     </tr>
     <tr>
       <th>177486</th>
@@ -3269,10 +3306,12 @@ tidy_data.head(200000)
     </tr>
   </tbody>
 </table>
-<p>177500 rows × 16 columns</p>
+<p>159687 rows × 16 columns</p>
 </div>
 
 
+
+## Analysis of the cloud cover data
 
 ### Cloud cover in Landsat observations
 
