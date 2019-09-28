@@ -1498,7 +1498,6 @@ In addition, the following data ca also be useful:
 1. What is the monthly average percentage of cloud cover observed for each region?
 1. Which regions are more affected by cloud cover?
 1. Which state did present the lowest annual cloud cover rate?
-1. Do regions that are more affected by cloud cover present the highest deforastation rates? (????? deforastation data)
 1. What is the mean cloud covarage observed in each season of the year?
 1. What is the percentage of scenes free of cloud in each region?
 
