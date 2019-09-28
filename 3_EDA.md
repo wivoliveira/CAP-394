@@ -3383,6 +3383,7 @@ plt.show()
 
 
 In addition, the following table presents the number of available scenes for the area of interest, considering ten cloud clover (CC) levels:
+
     - Level 0: 00% <= CC <= 10%;
     - Level 1: 10% < CC <= 20%;
     - Level 2: 20% < CC <= 30%;
