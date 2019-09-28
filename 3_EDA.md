@@ -4831,6 +4831,7 @@ for m in np.arange(0,12,1):
 ```
 
 The next figure illustrates the monthly average cloud cover level of Landsat-8 observations obtained from February 2013 to July 2019, considering ten cloud cover levels:
+
     - Level 0: 00% <= CC <= 10%;
     - Level 1: 10% < CC <= 20%;
     - Level 2: 20% < CC <= 30%;
