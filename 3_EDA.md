@@ -4324,9 +4324,7 @@ for m in np.arange(0,12,1):
             df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colName] = '9'
 ```
 
-The next figure illustrates the monthly average cloud cover level of Landsat-8 observations obtained from February 2013 to July 2019. Unfortunately, I could not set an unique colormap for all subplots. Therefore, each map illustrated in the next figure follows a different legend.
-
-Cloud Cover levels:
+The next figure illustrates the monthly average cloud cover level of Landsat-8 observations obtained from February 2013 to July 2019, considering ten cloud cover levels:
     - Level 0: 00% <= CC <= 10%;
     - Level 1: 10% < CC <= 20%;
     - Level 2: 20% < CC <= 30%;
@@ -4830,9 +4828,7 @@ for m in np.arange(0,12,1):
             df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colName] = '9'
 ```
 
-The next figure illustrates the monthly average cloud cover level of Landsat-8 observations obtained from February 2013 to July 2019. Unfortunately, I could not set an unique colormap for all subplots. Therefore, each map illustrated in the next figure follows a different legend.
-
-Cloud Cover levels:
+The next figure illustrates the monthly average cloud cover level of Landsat-8 observations obtained from February 2013 to July 2019, considering ten cloud cover levels:
     - Level 0: 00% <= CC <= 10%;
     - Level 1: 10% < CC <= 20%;
     - Level 2: 20% < CC <= 30%;
