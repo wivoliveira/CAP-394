@@ -3410,7 +3410,7 @@ counts = counts.fillna(0)
     Table 2. Number of Landsat-8 and Sentinel-2 scenes available, considering different CC levels.
     
 
-<p align="center"><img src="./images/Table_2_NumImages_CC_Level.JPG"></p>
+<p align="center"><img src="./images/Table_2_PercetageImages_CC_Level.JPG"></p>
 
 ### Average cloud cover observed in each Brazilian state
 
