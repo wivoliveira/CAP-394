@@ -54,7 +54,19 @@ wrs.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -273,7 +285,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0xa05fbf8b00>
+    <folium.map.LayerControl at 0x3d6657d160>
 
 
 
@@ -308,7 +320,19 @@ S2_zones.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -440,7 +464,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0xa05aa7bac8>
+    <folium.map.LayerControl at 0x3d5d48c550>
 
 
 
@@ -467,14 +491,23 @@ Description of the shapefile that contains the boundaries of the Brazilian state
 BR_Amazon_Estates
 ```
 
-    The history saving thread hit an unexpected error (OperationalError('disk I/O error')).History will not be written to the database.
-    
-
 
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -838,7 +871,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0xa06351b6d8>
+    <folium.map.LayerControl at 0x3d665899b0>
 
 
 
@@ -854,7 +887,19 @@ df_grid_perState
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -956,7 +1001,19 @@ df_wrs.head(20)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1247,7 +1304,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0xa06351f1d0>
+    <folium.map.LayerControl at 0x3d66587240>
 
 
 
@@ -1267,7 +1324,19 @@ df_grid_perState
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1369,7 +1438,19 @@ df_S2_zones.head(629)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1864,7 +1945,19 @@ tidy_data.head(5)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2022,7 +2115,19 @@ tidy_data
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3260,14 +3365,26 @@ counts = counts.fillna(0)
 counts
 ```
 
-    Table 1. Number of Landsat-8 and Sentinel-2 scenes available for the study area from February 2013 to July 2019
+    Table 1. Number of Landsat-8 and Sentinel-2 scenes available for the study area from February 2013 to July 2019.
     
 
 
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3412,7 +3529,7 @@ counts = counts.fillna(0)
 
 <p align="center"><img src="./images/Table_2_PercetageImages_CC_Level.JPG"></p>
 
-### Average cloud cover observed in each Brazilian state
+### Average annual cloud cover observed in each Brazilian state
 
 
 ```python
@@ -3423,8 +3540,9 @@ counts = tidy_data['CloudCover'].groupby([tidy_data.Platform.rename('Platform'),
                                           tidy_data.AcquisitionDate.dt.year.rename('Year')]).agg({'mean'})
 counts = counts.unstack(level=0)
 counts.columns = counts.columns.droplevel(level=0)
-counts = counts.fillna(0)
-counts.round(2)
+counts_cp = counts.copy()
+counts_cp = counts_cp.fillna('-')
+counts_cp.round(2)
 ```
 
     Table 3. Average annual cloud cover (%) observed in each Brazilian state.
@@ -3434,7 +3552,19 @@ counts.round(2)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3457,445 +3587,405 @@ counts.round(2)
       <th rowspan="7" valign="top">AC</th>
       <th>2013</th>
       <td>42.48</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>55.93</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>54.79</td>
-      <td>31.41</td>
-      <td>0.00</td>
+      <td>31.4116</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>54.30</td>
-      <td>45.18</td>
-      <td>0.00</td>
+      <td>45.1831</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>59.03</td>
-      <td>57.85</td>
-      <td>68.54</td>
+      <td>57.8471</td>
+      <td>68.5427</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>56.91</td>
-      <td>51.45</td>
-      <td>51.44</td>
+      <td>51.4481</td>
+      <td>51.4435</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>59.08</td>
-      <td>66.16</td>
-      <td>62.22</td>
+      <td>66.1575</td>
+      <td>62.2195</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">AM</th>
       <th>2013</th>
       <td>54.02</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>58.03</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>52.26</td>
-      <td>32.53</td>
-      <td>0.00</td>
+      <td>32.5276</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>57.14</td>
-      <td>53.32</td>
-      <td>0.00</td>
+      <td>53.3182</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>57.92</td>
-      <td>59.70</td>
-      <td>64.49</td>
+      <td>59.6969</td>
+      <td>64.4894</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>58.99</td>
-      <td>54.45</td>
-      <td>48.87</td>
+      <td>54.4453</td>
+      <td>48.8698</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>63.07</td>
-      <td>63.88</td>
-      <td>60.30</td>
+      <td>63.8791</td>
+      <td>60.3042</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">MA</th>
       <th>2013</th>
       <td>41.18</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>48.24</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>44.62</td>
-      <td>32.36</td>
-      <td>0.00</td>
+      <td>32.3577</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>44.60</td>
-      <td>42.68</td>
-      <td>0.00</td>
+      <td>42.6761</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>41.96</td>
-      <td>44.37</td>
-      <td>48.40</td>
+      <td>44.3716</td>
+      <td>48.3962</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>44.60</td>
-      <td>42.33</td>
-      <td>39.58</td>
+      <td>42.3275</td>
+      <td>39.5784</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>50.00</td>
-      <td>57.24</td>
-      <td>55.85</td>
+      <td>57.2377</td>
+      <td>55.8474</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">MT</th>
       <th>2013</th>
       <td>35.06</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>41.60</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>35.25</td>
-      <td>31.77</td>
-      <td>0.00</td>
+      <td>31.7744</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>37.28</td>
-      <td>37.98</td>
-      <td>0.00</td>
+      <td>37.9799</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>38.99</td>
-      <td>43.40</td>
-      <td>57.86</td>
+      <td>43.3958</td>
+      <td>57.8611</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>42.46</td>
-      <td>41.26</td>
-      <td>39.10</td>
+      <td>41.2617</td>
+      <td>39.1048</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>36.40</td>
-      <td>47.87</td>
-      <td>44.06</td>
+      <td>47.8745</td>
+      <td>44.0586</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">PA</th>
       <th>2013</th>
       <td>52.11</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>55.82</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>51.85</td>
-      <td>39.25</td>
-      <td>0.00</td>
+      <td>39.2518</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>54.01</td>
-      <td>50.16</td>
-      <td>0.00</td>
+      <td>50.1603</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>54.76</td>
-      <td>54.80</td>
-      <td>54.70</td>
+      <td>54.8012</td>
+      <td>54.6986</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>55.48</td>
-      <td>51.19</td>
-      <td>44.43</td>
+      <td>51.189</td>
+      <td>44.4302</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>59.46</td>
-      <td>64.59</td>
-      <td>60.61</td>
+      <td>64.586</td>
+      <td>60.6144</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">RO</th>
       <th>2013</th>
       <td>44.10</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>46.33</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>43.55</td>
-      <td>34.36</td>
-      <td>0.00</td>
+      <td>34.3589</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>49.61</td>
-      <td>40.09</td>
-      <td>0.00</td>
+      <td>40.0894</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>45.42</td>
-      <td>50.43</td>
-      <td>62.12</td>
+      <td>50.428</td>
+      <td>62.1196</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>49.18</td>
-      <td>45.03</td>
-      <td>45.65</td>
+      <td>45.0287</td>
+      <td>45.6456</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>51.54</td>
-      <td>57.41</td>
-      <td>52.36</td>
+      <td>57.4135</td>
+      <td>52.3622</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">RR</th>
       <th>2013</th>
       <td>57.75</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>56.56</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>55.58</td>
-      <td>26.67</td>
-      <td>0.00</td>
+      <td>26.6654</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>55.93</td>
-      <td>50.90</td>
-      <td>0.00</td>
+      <td>50.9021</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>54.06</td>
-      <td>61.48</td>
-      <td>54.53</td>
+      <td>61.477</td>
+      <td>54.525</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>55.09</td>
-      <td>54.82</td>
-      <td>49.11</td>
+      <td>54.8157</td>
+      <td>49.1064</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>61.85</td>
-      <td>55.42</td>
-      <td>52.81</td>
+      <td>55.4214</td>
+      <td>52.8121</td>
     </tr>
     <tr>
       <th rowspan="7" valign="top">TO</th>
       <th>2013</th>
       <td>26.67</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2014</th>
       <td>38.94</td>
-      <td>0.00</td>
-      <td>0.00</td>
+      <td>-</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2015</th>
       <td>31.58</td>
-      <td>25.90</td>
-      <td>0.00</td>
+      <td>25.9017</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2016</th>
       <td>29.12</td>
-      <td>37.61</td>
-      <td>0.00</td>
+      <td>37.6101</td>
+      <td>-</td>
     </tr>
     <tr>
       <th>2017</th>
       <td>35.15</td>
-      <td>39.45</td>
-      <td>51.35</td>
+      <td>39.4519</td>
+      <td>51.3541</td>
     </tr>
     <tr>
       <th>2018</th>
       <td>34.50</td>
-      <td>37.62</td>
-      <td>31.89</td>
+      <td>37.6186</td>
+      <td>31.886</td>
     </tr>
     <tr>
       <th>2019</th>
       <td>33.58</td>
-      <td>45.68</td>
-      <td>47.74</td>
+      <td>45.6817</td>
+      <td>47.7367</td>
     </tr>
   </tbody>
 </table>
 </div>
 
 
+
+#### Statistics regarding the average CC observed in each Brazilian state from February 2013 to July 2019
 
 
 ```python
-#tidy_data
-print("Table 4. Average cloud cover (%) observed in each Brazilian state from February 2013 to July 2019.")
-gpd.pd.set_option('display.max_rows', None)
-counts = tidy_data['CloudCover'].groupby([tidy_data.Platform.rename('Platform'), tidy_data.STATE.rename('State')]).agg({'mean'})
-counts = counts.unstack(level=0)
-counts.columns = counts.columns.droplevel(level=0)
-counts = counts.fillna(0)
-counts.round(2)
+plt.figure(figsize=(20, 30), facecolor='w', edgecolor='k')
+
+plt.subplot(421)
+plt.title('AC', fontsize=18)
+counts.loc[('AC')].boxplot()
+
+plt.subplot(422)
+plt.title('AM', fontsize=18)
+counts.loc[('AM')].boxplot()
+
+plt.subplot(423)
+plt.title('MA', fontsize=18)
+counts.loc[('MA')].boxplot()
+
+plt.subplot(424)
+plt.title('MT', fontsize=18)
+counts.loc[('MT')].boxplot()
+
+plt.subplot(425)
+plt.title('PA', fontsize=18)
+counts.loc[('PA')].boxplot()
+
+plt.subplot(426)
+plt.title('RO', fontsize=18)
+counts.loc[('RO')].boxplot()
+
+plt.subplot(427)
+plt.title('RR', fontsize=18)
+counts.loc[('RR')].boxplot()
+
+plt.subplot(428)
+plt.title('TO', fontsize=18)
+counts.loc[('TO')].boxplot()
 ```
 
-    Table 4. Average cloud cover (%) observed in each Brazilian state from February 2013 to July 2019.
-    
+
+
+
+    <matplotlib.axes._subplots.AxesSubplot at 0x3d67d7e7f0>
 
 
 
 
-<div>
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Platform</th>
-      <th>L8</th>
-      <th>S2A</th>
-      <th>S2B</th>
-    </tr>
-    <tr>
-      <th>State</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>AC</th>
-      <td>55.08</td>
-      <td>53.84</td>
-      <td>56.17</td>
-    </tr>
-    <tr>
-      <th>AM</th>
-      <td>57.11</td>
-      <td>56.52</td>
-      <td>53.64</td>
-    </tr>
-    <tr>
-      <th>MA</th>
-      <td>44.87</td>
-      <td>45.34</td>
-      <td>44.85</td>
-    </tr>
-    <tr>
-      <th>MT</th>
-      <td>38.40</td>
-      <td>41.87</td>
-      <td>42.55</td>
-    </tr>
-    <tr>
-      <th>PA</th>
-      <td>54.59</td>
-      <td>53.84</td>
-      <td>49.93</td>
-    </tr>
-    <tr>
-      <th>RO</th>
-      <td>46.97</td>
-      <td>47.08</td>
-      <td>49.26</td>
-    </tr>
-    <tr>
-      <th>RR</th>
-      <td>56.28</td>
-      <td>55.17</td>
-      <td>50.74</td>
-    </tr>
-    <tr>
-      <th>TO</th>
-      <td>33.00</td>
-      <td>39.46</td>
-      <td>38.37</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+![png](output_72_1.png)
 
 
+### Monthly average cloud cover in Landsat observations
 
-### Cloud cover in Landsat observations
-
-Average cloud cover observed in each WRS grid.
+Analysis of the average cloud cover level observed in each WRS grid that intersect the Brazilian Amazon.
 
 
 ```python
@@ -3928,7 +4018,19 @@ df_wrs_CC.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3950,18 +4052,6 @@ df_wrs_CC.head(10)
       <th>Avg_CC_Oct</th>
       <th>Avg_CC_Nov</th>
       <th>Avg_CC_Dec</th>
-      <th>CC_Level_Jan</th>
-      <th>CC_Level_Feb</th>
-      <th>CC_Level_Mar</th>
-      <th>CC_Level_Apr</th>
-      <th>CC_Level_Mai</th>
-      <th>CC_Level_Jun</th>
-      <th>CC_Level_Jul</th>
-      <th>CC_Level_Aug</th>
-      <th>CC_Level_Sep</th>
-      <th>CC_Level_Oct</th>
-      <th>CC_Level_Nov</th>
-      <th>CC_Level_Dec</th>
     </tr>
   </thead>
   <tbody>
@@ -3984,18 +4074,6 @@ df_wrs_CC.head(10)
       <td>50.67</td>
       <td>74.41</td>
       <td>57.65</td>
-      <td>5</td>
-      <td>6</td>
-      <td>6</td>
-      <td>7</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>5</td>
-      <td>5</td>
-      <td>7</td>
-      <td>5</td>
     </tr>
     <tr>
       <th>57</th>
@@ -4016,18 +4094,6 @@ df_wrs_CC.head(10)
       <td>52.31</td>
       <td>66.34</td>
       <td>65.5</td>
-      <td>5</td>
-      <td>7</td>
-      <td>5</td>
-      <td>8</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>7</td>
-      <td>5</td>
-      <td>5</td>
-      <td>6</td>
-      <td>6</td>
     </tr>
     <tr>
       <th>58</th>
@@ -4048,18 +4114,6 @@ df_wrs_CC.head(10)
       <td>52.42</td>
       <td>50.12</td>
       <td>55.52</td>
-      <td>5</td>
-      <td>6</td>
-      <td>5</td>
-      <td>8</td>
-      <td>6</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>4</td>
-      <td>5</td>
-      <td>5</td>
-      <td>5</td>
     </tr>
     <tr>
       <th>59</th>
@@ -4080,18 +4134,6 @@ df_wrs_CC.head(10)
       <td>55.64</td>
       <td>53.41</td>
       <td>46.57</td>
-      <td>5</td>
-      <td>6</td>
-      <td>6</td>
-      <td>6</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
-      <td>5</td>
-      <td>3</td>
-      <td>5</td>
-      <td>5</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>60</th>
@@ -4112,18 +4154,6 @@ df_wrs_CC.head(10)
       <td>53.99</td>
       <td>61.65</td>
       <td>49.66</td>
-      <td>6</td>
-      <td>7</td>
-      <td>5</td>
-      <td>6</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>61</th>
@@ -4144,18 +4174,6 @@ df_wrs_CC.head(10)
       <td>55.62</td>
       <td>63.89</td>
       <td>42.12</td>
-      <td>7</td>
-      <td>6</td>
-      <td>6</td>
-      <td>7</td>
-      <td>5</td>
-      <td>5</td>
-      <td>4</td>
-      <td>4</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>4</td>
     </tr>
     <tr>
       <th>62</th>
@@ -4176,18 +4194,6 @@ df_wrs_CC.head(10)
       <td>62.6</td>
       <td>60.23</td>
       <td>58.86</td>
-      <td>8</td>
-      <td>7</td>
-      <td>6</td>
-      <td>7</td>
-      <td>5</td>
-      <td>4</td>
-      <td>3</td>
-      <td>4</td>
-      <td>3</td>
-      <td>6</td>
-      <td>6</td>
-      <td>5</td>
     </tr>
     <tr>
       <th>63</th>
@@ -4208,18 +4214,6 @@ df_wrs_CC.head(10)
       <td>67.78</td>
       <td>60.07</td>
       <td>66.35</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>7</td>
-      <td>5</td>
-      <td>4</td>
-      <td>3</td>
-      <td>2</td>
-      <td>4</td>
-      <td>6</td>
-      <td>6</td>
-      <td>6</td>
     </tr>
     <tr>
       <th>64</th>
@@ -4240,18 +4234,6 @@ df_wrs_CC.head(10)
       <td>67.75</td>
       <td>58.11</td>
       <td>68.93</td>
-      <td>7</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>6</td>
-      <td>4</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>6</td>
-      <td>5</td>
-      <td>6</td>
     </tr>
     <tr>
       <th>65</th>
@@ -4272,18 +4254,6 @@ df_wrs_CC.head(10)
       <td>48.06</td>
       <td>49.55</td>
       <td>69.95</td>
-      <td>7</td>
-      <td>6</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>4</td>
-      <td>4</td>
-      <td>6</td>
     </tr>
   </tbody>
 </table>
@@ -4326,7 +4296,7 @@ for m in np.arange(0,12,1):
 ```
 
 The next figure illustrates the monthly average cloud cover level of Landsat-8 observations obtained from February 2013 to July 2019, considering ten cloud cover levels:
-
+    
     - Level 0: 00% <= CC <= 10%;
     - Level 1: 10% < CC <= 20%;
     - Level 2: 20% < CC <= 30%;
@@ -4353,31 +4323,25 @@ for month in months:
     # Create the most basic OSM folium map
     m = folium.Map(location=center, zoom_start=zoom, control_scale=True)
 
-    # Add the bounds GeoDataFrame
-    #m.add_child(folium.GeoJson(bounding_box_AM.__geo_interface__, name='Area of Study', 
-    #                           style_function=lambda x: {'color': 'green', 'alpha': 0}))
-
-    #month = 'Mar'
-
     # Iterate through each Polygon of paths and rows intersecting the area
     for i, row in df_wrs_CC.iterrows():    
         # Create a string to save the path and row of this Polygon    
         name = 'path: %03d, row: %03d, CC: %f' % (row.PATH, row.ROW, row['Avg_CC_'+month])
 
         if(row['CC_Level_'+month] == '0'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok #919191
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#FCFBFD', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '1'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok 
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#F0E1FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '2'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#D9B3FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '3'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
                                                 'color': '#504C8F', 'fillColor': '#C387FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '4'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
                                                 'color': '#504C8F', 'fillColor': '#B469FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '5'):
             g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
@@ -4389,10 +4353,10 @@ for month in months:
             g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#7B00F6', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '8'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
                                                 'color': '#504C8F', 'fillColor': '#6900D2', 'fillOpacity': 1, 'weight': 2})
-        else: #(row.CC_Level_Jan == '9'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {#ok
+        else: #(row['CC_Level_'+month] == '9'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#3F007E', 'fillOpacity': 1, 'weight': 2})
 
         # Add a folium Popup object with the name string
@@ -4400,19 +4364,19 @@ for month in months:
         # Add the object to the map
         g.add_to(m)
 
-    m.add_child(folium.GeoJson(bounding_box_AM.__geo_interface__, name='Area of Study', 
-                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0}))
+    m.add_child(folium.GeoJson(BR_Amazon_Estates.boundary.__geo_interface__, name='Area of Study', 
+                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
 
     folium.LayerControl().add_to(m)
     #m.save('Output/Prints_Montly_avg_CC/Average_CC_'+month+'.html')
 #m
 ```
 
-<p align="center"><img src="./images/Figure_L8_avg_CC.png" width="100%"></p>
+<p align="center"><img src="./images/Figure_L8_avg_CC_states.png" width="100%"></p>
 
-### Cloud cover in Sentinel observations
+### Monthly average cloud cover in Sentinel observations
 
-Average cloud cover observed in each Sentinel tile.
+Analysis of the average cloud cover observed in each Sentinel tile that intersect the Brazilian Amazon.
 
 
 ```python
@@ -4444,7 +4408,19 @@ df_S2_zones_CC.head(10)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -4465,18 +4441,6 @@ df_S2_zones_CC.head(10)
       <th>Avg_CC_Oct</th>
       <th>Avg_CC_Nov</th>
       <th>Avg_CC_Dec</th>
-      <th>CC_Level_Jan</th>
-      <th>CC_Level_Feb</th>
-      <th>CC_Level_Mar</th>
-      <th>CC_Level_Apr</th>
-      <th>CC_Level_Mai</th>
-      <th>CC_Level_Jun</th>
-      <th>CC_Level_Jul</th>
-      <th>CC_Level_Aug</th>
-      <th>CC_Level_Sep</th>
-      <th>CC_Level_Oct</th>
-      <th>CC_Level_Nov</th>
-      <th>CC_Level_Dec</th>
     </tr>
   </thead>
   <tbody>
@@ -4498,18 +4462,6 @@ df_S2_zones_CC.head(10)
       <td>50.4</td>
       <td>72.63</td>
       <td>72.05</td>
-      <td>7</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>3</td>
-      <td>2</td>
-      <td>5</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16766</th>
@@ -4529,18 +4481,6 @@ df_S2_zones_CC.head(10)
       <td>70.44</td>
       <td>79.33</td>
       <td>60.64</td>
-      <td>6</td>
-      <td>7</td>
-      <td>6</td>
-      <td>6</td>
-      <td>4</td>
-      <td>4</td>
-      <td>1</td>
-      <td>6</td>
-      <td>3</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
     </tr>
     <tr>
       <th>16767</th>
@@ -4560,18 +4500,6 @@ df_S2_zones_CC.head(10)
       <td>62.13</td>
       <td>86.8</td>
       <td>63.9</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>4</td>
-      <td>1</td>
-      <td>7</td>
-      <td>2</td>
-      <td>6</td>
-      <td>8</td>
-      <td>6</td>
     </tr>
     <tr>
       <th>16775</th>
@@ -4591,18 +4519,6 @@ df_S2_zones_CC.head(10)
       <td>47.7</td>
       <td>74.27</td>
       <td>73.24</td>
-      <td>7</td>
-      <td>8</td>
-      <td>7</td>
-      <td>6</td>
-      <td>3</td>
-      <td>3</td>
-      <td>0</td>
-      <td>3</td>
-      <td>2</td>
-      <td>4</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16776</th>
@@ -4622,18 +4538,6 @@ df_S2_zones_CC.head(10)
       <td>43.87</td>
       <td>71.43</td>
       <td>74.26</td>
-      <td>6</td>
-      <td>8</td>
-      <td>7</td>
-      <td>6</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>4</td>
-      <td>2</td>
-      <td>4</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16818</th>
@@ -4653,18 +4557,6 @@ df_S2_zones_CC.head(10)
       <td>54.79</td>
       <td>68.71</td>
       <td>74.96</td>
-      <td>7</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>1</td>
-      <td>4</td>
-      <td>2</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16819</th>
@@ -4684,18 +4576,6 @@ df_S2_zones_CC.head(10)
       <td>51.81</td>
       <td>61.11</td>
       <td>73.28</td>
-      <td>7</td>
-      <td>7</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>2</td>
-      <td>3</td>
-      <td>2</td>
-      <td>5</td>
-      <td>6</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16827</th>
@@ -4715,18 +4595,6 @@ df_S2_zones_CC.head(10)
       <td>63.3</td>
       <td>77.35</td>
       <td>77.71</td>
-      <td>6</td>
-      <td>7</td>
-      <td>6</td>
-      <td>6</td>
-      <td>4</td>
-      <td>5</td>
-      <td>1</td>
-      <td>7</td>
-      <td>3</td>
-      <td>6</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16828</th>
@@ -4746,18 +4614,6 @@ df_S2_zones_CC.head(10)
       <td>62.62</td>
       <td>76.7</td>
       <td>78.11</td>
-      <td>6</td>
-      <td>8</td>
-      <td>6</td>
-      <td>6</td>
-      <td>4</td>
-      <td>5</td>
-      <td>2</td>
-      <td>6</td>
-      <td>4</td>
-      <td>6</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>16829</th>
@@ -4777,18 +4633,6 @@ df_S2_zones_CC.head(10)
       <td>48.49</td>
       <td>75.24</td>
       <td>68.27</td>
-      <td>7</td>
-      <td>7</td>
-      <td>8</td>
-      <td>7</td>
-      <td>6</td>
-      <td>5</td>
-      <td>1</td>
-      <td>4</td>
-      <td>2</td>
-      <td>4</td>
-      <td>7</td>
-      <td>6</td>
     </tr>
   </tbody>
 </table>
@@ -4858,31 +4702,25 @@ for month in months:
     # Create the most basic OSM folium map
     m = folium.Map(location=center, zoom_start=zoom, control_scale=True)
 
-    # Add the bounds GeoDataFrame
-    #m.add_child(folium.GeoJson(bounding_box_AM.__geo_interface__, name='Area of Study', 
-    #                           style_function=lambda x: {'color': 'green', 'alpha': 0}))
-
-    #month = 'Mar'
-
     # Iterate through each Polygon of paths and rows intersecting the area
     for i, row in df_S2_zones_CC.iterrows():    
         # Create a string to save the path and row of this Polygon    
         name = 'Tile: %s, CC: %f' % (row.NAME, row['Avg_CC_'+month])
 
         if(row['CC_Level_'+month] == '0'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok #919191
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#FCFBFD', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '1'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok 
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
                                                 'color': '#504C8F', 'fillColor': '#F0E1FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '2'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#D9B3FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '3'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
                                                 'color': '#504C8F', 'fillColor': '#C387FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '4'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#B469FF', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '5'):
             g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
@@ -4894,10 +4732,10 @@ for month in months:
             g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#7B00F6', 'fillOpacity': 1, 'weight': 2})
         elif(row['CC_Level_'+month] == '8'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { #ok
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#6900D2', 'fillOpacity': 1, 'weight': 2})
-        else: #(row.CC_Level_Jan == '9'):
-            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {#ok
+        else: #(row['CC_Level_'+month] == '9'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
                                                 'color': '#504C8F', 'fillColor': '#3F007E', 'fillOpacity': 1, 'weight': 2})
 
         # Add a folium Popup object with the name string
@@ -4905,42 +4743,865 @@ for month in months:
         # Add the object to the map
         g.add_to(m)
 
-    m.add_child(folium.GeoJson(bounding_box_AM.__geo_interface__, name='Area of Study', 
-                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0}))
+    m.add_child(folium.GeoJson(BR_Amazon_Estates.boundary.__geo_interface__, name='Area of Study', 
+                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
 
     folium.LayerControl().add_to(m)
-    m.save('Output/Prints_S2_Montly_avg_CC/S2_Average_CC_'+month+'.html')
+    #m.save('Output/Prints_S2_Montly_avg_CC/S2_Average_CC_'+month+'.html')
 #m
 ```
 
-<p align="center"><img src="./images/Figure_S2_avg_CC.png" width="100%"></p>
+<p align="center"><img src="./images/Figure_S2_avg_CC_states.png" width="100%"></p>
+
+### Seasonal cloud cover in Landsat observations
+
+We also analysed the differences in cloud cover during the four seasons: summer, from December to February; autumn, from March to May; winter, from June to August; spring, from September to November.
 
 
 ```python
-
+# Creating a new column in the tidy dataframe
+tidy_data['SEASON'] = 'None'
 ```
+
+Identifying the season in which each observation was acquired: 
 
 
 ```python
-
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 12), 'SEASON'] = 'Summer'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 1), 'SEASON'] = 'Summer'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 2), 'SEASON'] = 'Summer'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 3), 'SEASON'] = 'Autumn'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 4), 'SEASON'] = 'Autumn'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 5), 'SEASON'] = 'Autumn'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 6), 'SEASON'] = 'Winter'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 7), 'SEASON'] = 'Winter'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 8), 'SEASON'] = 'Winter'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 9), 'SEASON'] = 'Spring'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 10), 'SEASON'] = 'Spring'
+tidy_data.loc[(tidy_data.AcquisitionDate.dt.month == 11), 'SEASON'] = 'Spring'
 ```
+
+Computing the average cloud cover related to each season:
 
 
 ```python
+seasons = ['Summer', 'Autumn', 'Winter', 'Spring']
 
+for s in np.arange(0,4,1):
+    # Creating new columns to store the seasonal average cloud cover and its level
+    colName = 'Avg_CC_'+seasons[s]
+    df_wrs_CC[colName] = "None"
+    
+    colNameL = 'CC_Level_'+seasons[s]
+    df_wrs_CC[colNameL] = "None"
+    
+    for i, row in df_wrs_CC.iterrows():
+        x = round(tidy_data.CloudCover.loc[(tidy_data.WRSPath == row.PATH) & 
+                                           (tidy_data.WRSRow == row.ROW) &
+                                           (tidy_data.SEASON == seasons[s])].mean(), 2)
+        
+        df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colName] = x
+        
+        if(x <= 10):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '0'
+        elif(x <= 20):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '1'
+        elif(x <= 30):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '2'
+        elif(x <= 40):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '3'
+        elif(x <= 50):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '4'
+        elif(x <= 60):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '5'
+        elif(x <= 70):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '6'
+        elif(x <= 80):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '7'
+        elif(x <= 90):
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '8'
+        else: 
+            df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colNameL] = '9'
 ```
 
-### Regional differences in annual and seasonal cloud cover
+The next table illustrates the average cloud cover values previouly computed for four observations. This table also presents their respective cloud cover level.
+    
+    - Level 0: 00% <= CC <= 10%;
+    - Level 1: 10% < CC <= 20%;
+    - Level 2: 20% < CC <= 30%;
+    - Level 3: 30% < CC <= 40%;
+    - Level 4: 40% < CC <= 50%;
+    - Level 5: 50% < CC <= 60%;
+    - Level 6: 60% < CC <= 70%;
+    - Level 7: 70% < CC <= 80%;
+    - Level 8: 80% < CC <= 90%.
+    - Level 9: 90% < CC <= 100%;
 
 
 ```python
-
+df_wrs_CC[['PATH', 'ROW', 'Avg_CC_Summer', 'CC_Level_Summer', 'Avg_CC_Autumn', 'CC_Level_Autumn', 'Avg_CC_Winter', 'CC_Level_Winter', 'Avg_CC_Spring', 'CC_Level_Spring']].head(4)
 ```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PATH</th>
+      <th>ROW</th>
+      <th>Avg_CC_Summer</th>
+      <th>CC_Level_Summer</th>
+      <th>Avg_CC_Autumn</th>
+      <th>CC_Level_Autumn</th>
+      <th>Avg_CC_Winter</th>
+      <th>CC_Level_Winter</th>
+      <th>Avg_CC_Spring</th>
+      <th>CC_Level_Spring</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>56</th>
+      <td>1</td>
+      <td>57</td>
+      <td>60.57</td>
+      <td>6</td>
+      <td>73.66</td>
+      <td>7</td>
+      <td>66.61</td>
+      <td>6</td>
+      <td>60.07</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>1</td>
+      <td>58</td>
+      <td>65.12</td>
+      <td>6</td>
+      <td>70.07</td>
+      <td>7</td>
+      <td>73.08</td>
+      <td>7</td>
+      <td>57.17</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>1</td>
+      <td>59</td>
+      <td>56.61</td>
+      <td>5</td>
+      <td>67.61</td>
+      <td>6</td>
+      <td>70.26</td>
+      <td>7</td>
+      <td>49.99</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>1</td>
+      <td>60</td>
+      <td>54.26</td>
+      <td>5</td>
+      <td>62.42</td>
+      <td>6</td>
+      <td>64.42</td>
+      <td>6</td>
+      <td>49.83</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
+seasons = ['Summer', 'Autumn', 'Winter', 'Spring']
 
+for season in seasons:
+    # Get the center of the map
+    xy = np.asarray(bounding_box_AM.centroid.xy).squeeze()
+    center = list(xy[::-1])
+
+    # Select a zoom
+    zoom = 5
+
+    # Create the most basic OSM folium map
+    m = folium.Map(location=center, zoom_start=zoom, control_scale=True)
+
+    # Iterate through each Polygon of paths and rows intersecting the area
+    for i, row in df_wrs_CC.iterrows():    
+        # Create a string to save the path and row of this Polygon    
+        name = 'path: %03d, row: %03d, CC: %f' % (row.PATH, row.ROW, row['Avg_CC_'+season])
+
+        if(row['CC_Level_'+season] == '0'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#FCFBFD', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '1'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#F0E1FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '2'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#D9B3FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '3'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#C387FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '4'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#B469FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '5'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#A143FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '6'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#8E1DFF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '7'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#7B00F6', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '8'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#6900D2', 'fillOpacity': 1, 'weight': 2})
+        else: #(row['CC_Level_'+season] == '9'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#3F007E', 'fillOpacity': 1, 'weight': 2})
+
+        # Add a folium Popup object with the name string
+        g.add_child(folium.Popup(name))
+        # Add the object to the map
+        g.add_to(m)
+
+    m.add_child(folium.GeoJson(BR_Amazon_Estates.boundary.__geo_interface__, name='Area of Study', 
+                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
+
+    folium.LayerControl().add_to(m)
+    #m.save('Output/Prints_L8_Seasonal_avg__CC/Average_CC_'+season+'.html')
+#m
 ```
+
+<p align="center"><img src="./images/Figure_L8_avg_CC_seasons.png" width="100%"></p>
+
+### Seasonal cloud cover in Sentinel observations
+
+
+```python
+seasons = ['Summer', 'Autumn', 'Winter', 'Spring']
+
+for s in np.arange(0,4,1):
+    # Creating new columns to store the seasonal average cloud cover and its level
+    colName = 'Avg_CC_'+seasons[s]
+    df_S2_zones_CC[colName] = "None"
+    
+    colNameL = 'CC_Level_'+seasons[s]
+    df_S2_zones_CC[colNameL] = "None"
+    
+    for i, row in df_S2_zones_CC.iterrows():
+        x = round(tidy_data.CloudCover.loc[(tidy_data.TileNumber == row.NAME) & 
+                                           (tidy_data.SEASON == seasons[s])].mean(), 2)
+        
+        df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colName] = x
+        
+        if(x <= 10):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '0'
+        elif(x <= 20):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '1'
+        elif(x <= 30):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '2'
+        elif(x <= 40):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '3'
+        elif(x <= 50):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '4'
+        elif(x <= 60):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '5'
+        elif(x <= 70):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '6'
+        elif(x <= 80):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '7'
+        elif(x <= 90):
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '8'
+        else: 
+            df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colNameL] = '9'
+```
+
+The next table illustrates the average cloud cover values previouly computed for four observations. This table also presents their respective cloud cover level.
+    
+    - Level 0: 00% <= CC <= 10%;
+    - Level 1: 10% < CC <= 20%;
+    - Level 2: 20% < CC <= 30%;
+    - Level 3: 30% < CC <= 40%;
+    - Level 4: 40% < CC <= 50%;
+    - Level 5: 50% < CC <= 60%;
+    - Level 6: 60% < CC <= 70%;
+    - Level 7: 70% < CC <= 80%;
+    - Level 8: 80% < CC <= 90%.
+    - Level 9: 90% < CC <= 100%;
+
+
+```python
+df_S2_zones_CC[['NAME', 'Avg_CC_Summer', 'CC_Level_Summer', 'Avg_CC_Autumn', 'CC_Level_Autumn', 'Avg_CC_Winter', 'CC_Level_Winter', 'Avg_CC_Spring', 'CC_Level_Spring']].head(4)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NAME</th>
+      <th>Avg_CC_Summer</th>
+      <th>CC_Level_Summer</th>
+      <th>Avg_CC_Autumn</th>
+      <th>CC_Level_Autumn</th>
+      <th>Avg_CC_Winter</th>
+      <th>CC_Level_Winter</th>
+      <th>Avg_CC_Spring</th>
+      <th>CC_Level_Spring</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16758</th>
+      <td>18LXR</td>
+      <td>74.08</td>
+      <td>7</td>
+      <td>64.19</td>
+      <td>6</td>
+      <td>27.89</td>
+      <td>2</td>
+      <td>53.64</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>16766</th>
+      <td>18LYQ</td>
+      <td>65.14</td>
+      <td>6</td>
+      <td>59.81</td>
+      <td>5</td>
+      <td>40.94</td>
+      <td>4</td>
+      <td>63.72</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>16767</th>
+      <td>18LYR</td>
+      <td>70.59</td>
+      <td>7</td>
+      <td>59.02</td>
+      <td>5</td>
+      <td>40.86</td>
+      <td>4</td>
+      <td>61.86</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>16775</th>
+      <td>18LZQ</td>
+      <td>76.42</td>
+      <td>7</td>
+      <td>62.85</td>
+      <td>6</td>
+      <td>25.35</td>
+      <td>2</td>
+      <td>50.01</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+seasons = ['Summer', 'Autumn', 'Winter', 'Spring']
+
+for season in seasons:
+    # Get the center of the map
+    xy = np.asarray(bounding_box_AM.centroid.xy).squeeze()
+    center = list(xy[::-1])
+
+    # Select a zoom
+    zoom = 5
+
+    # Create the most basic OSM folium map
+    m = folium.Map(location=center, zoom_start=zoom, control_scale=True)
+
+    # Iterate through each Polygon of paths and rows intersecting the area
+    for i, row in df_S2_zones_CC.iterrows():    
+        # Create a string to save the path and row of this Polygon    
+        name = 'Tile: %s, CC: %f' % (row.NAME, row['Avg_CC_'+season])
+
+        if(row['CC_Level_'+season] == '0'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#FCFBFD', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '1'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#F0E1FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '2'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#D9B3FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '3'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#C387FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '4'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#B469FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '5'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#A143FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '6'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#8E1DFF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '7'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#7B00F6', 'fillOpacity': 1, 'weight': 2})
+        elif(row['CC_Level_'+season] == '8'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#6900D2', 'fillOpacity': 1, 'weight': 2})
+        else: #(row['CC_Level_'+season] == '9'):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#3F007E', 'fillOpacity': 1, 'weight': 2})
+
+        # Add a folium Popup object with the name string
+        g.add_child(folium.Popup(name))
+        # Add the object to the map
+        g.add_to(m)
+
+    m.add_child(folium.GeoJson(BR_Amazon_Estates.boundary.__geo_interface__, name='Area of Study', 
+                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
+
+    folium.LayerControl().add_to(m)
+    #m.save('Output/Prints_S2_Seasonal_avg__CC/Average_CC_'+season+'.html')
+#m
+```
+
+<p align="center"><img src="./images/Figure_S2_avg_CC_seasons.png" width="100%"></p>
+
+### Average seasonal cloud cover for L8, S2A and S2B platforms
+
+
+```python
+print("Table 4. Average seasonal cloud cover (%) observed in each Brazilian state.")
+gpd.pd.set_option('display.max_rows', None)
+counts = tidy_data['CloudCover'].groupby([tidy_data.Platform.rename('Platform'), tidy_data.STATE.rename('State'), 
+                                          tidy_data.SEASON.rename('Season')]).agg({'mean'})
+counts = counts.unstack(level=0)
+counts.columns = counts.columns.droplevel(level=0)
+counts.round(2)
+```
+
+    Table 4. Average seasonal cloud cover (%) observed in each Brazilian state.
+    
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Platform</th>
+      <th>L8</th>
+      <th>S2A</th>
+      <th>S2B</th>
+    </tr>
+    <tr>
+      <th>State</th>
+      <th>Season</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">AC</th>
+      <th>Autumn</th>
+      <td>68.41</td>
+      <td>59.79</td>
+      <td>60.82</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>49.30</td>
+      <td>50.33</td>
+      <td>50.99</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>74.02</td>
+      <td>77.12</td>
+      <td>73.11</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>30.58</td>
+      <td>24.78</td>
+      <td>30.91</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">AM</th>
+      <th>Autumn</th>
+      <td>68.19</td>
+      <td>66.38</td>
+      <td>64.73</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>50.96</td>
+      <td>53.00</td>
+      <td>45.86</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>69.07</td>
+      <td>71.80</td>
+      <td>65.82</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>41.11</td>
+      <td>32.40</td>
+      <td>29.45</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">MA</th>
+      <th>Autumn</th>
+      <td>56.16</td>
+      <td>56.27</td>
+      <td>55.00</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>37.62</td>
+      <td>38.36</td>
+      <td>31.92</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>64.55</td>
+      <td>65.43</td>
+      <td>65.25</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>23.15</td>
+      <td>16.38</td>
+      <td>14.55</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">MT</th>
+      <th>Autumn</th>
+      <td>41.72</td>
+      <td>43.40</td>
+      <td>44.45</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>41.23</td>
+      <td>45.22</td>
+      <td>48.67</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>61.79</td>
+      <td>66.96</td>
+      <td>60.35</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>12.21</td>
+      <td>11.05</td>
+      <td>9.65</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">PA</th>
+      <th>Autumn</th>
+      <td>68.46</td>
+      <td>67.73</td>
+      <td>61.06</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>48.33</td>
+      <td>50.93</td>
+      <td>42.67</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>71.45</td>
+      <td>74.48</td>
+      <td>67.26</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>31.71</td>
+      <td>22.04</td>
+      <td>17.84</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">RO</th>
+      <th>Autumn</th>
+      <td>55.50</td>
+      <td>52.22</td>
+      <td>56.39</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>47.02</td>
+      <td>49.00</td>
+      <td>49.65</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>72.64</td>
+      <td>72.30</td>
+      <td>68.21</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>17.15</td>
+      <td>10.71</td>
+      <td>14.37</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">RR</th>
+      <th>Autumn</th>
+      <td>66.79</td>
+      <td>68.81</td>
+      <td>62.01</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>44.33</td>
+      <td>47.48</td>
+      <td>35.27</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>51.72</td>
+      <td>54.10</td>
+      <td>52.45</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>60.55</td>
+      <td>48.67</td>
+      <td>47.32</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">TO</th>
+      <th>Autumn</th>
+      <td>39.74</td>
+      <td>43.90</td>
+      <td>41.18</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>38.02</td>
+      <td>41.18</td>
+      <td>44.87</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>52.77</td>
+      <td>64.65</td>
+      <td>54.11</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>5.18</td>
+      <td>6.57</td>
+      <td>5.52</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+# Get the average cloud cover during each season. Here, we obtain an average value of the CC obtained for all platforms
+# We do not group the data by 'Platform'
+counts = tidy_data['CloudCover'].groupby([tidy_data.STATE.rename('State'), 
+                                          tidy_data.SEASON.rename('Season')]).agg({'mean'})
+counts = counts.unstack(level=0)
+counts.columns = counts.columns.droplevel(level=0)
+counts
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>State</th>
+      <th>AC</th>
+      <th>AM</th>
+      <th>MA</th>
+      <th>MT</th>
+      <th>PA</th>
+      <th>RO</th>
+      <th>RR</th>
+      <th>TO</th>
+    </tr>
+    <tr>
+      <th>Season</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Autumn</th>
+      <td>61.954648</td>
+      <td>66.160410</td>
+      <td>55.824823</td>
+      <td>43.436832</td>
+      <td>65.688800</td>
+      <td>54.260706</td>
+      <td>66.162117</td>
+      <td>42.304119</td>
+    </tr>
+    <tr>
+      <th>Spring</th>
+      <td>50.264046</td>
+      <td>50.544768</td>
+      <td>36.240451</td>
+      <td>45.424229</td>
+      <td>48.007769</td>
+      <td>48.763213</td>
+      <td>43.479866</td>
+      <td>41.756045</td>
+    </tr>
+    <tr>
+      <th>Summer</th>
+      <td>75.190419</td>
+      <td>69.266381</td>
+      <td>65.221338</td>
+      <td>63.801323</td>
+      <td>71.445206</td>
+      <td>70.890434</td>
+      <td>53.104764</td>
+      <td>59.018327</td>
+    </tr>
+    <tr>
+      <th>Winter</th>
+      <td>27.872411</td>
+      <td>33.321294</td>
+      <td>17.356057</td>
+      <td>10.887983</td>
+      <td>22.796054</td>
+      <td>13.252334</td>
+      <td>50.810180</td>
+      <td>5.998089</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+plt.figure(figsize=(14, 8))
+plt.title("Average seasonal cloud cover for L8, S2A and S2B platforms", fontweight="bold", fontsize=16)
+plt.plot(counts.AC, "blue", label="Acre")
+plt.plot(counts.AM, "red", label="Amazonas")
+plt.plot(counts.MA, "magenta", label="Maranhão")
+plt.plot(counts.MT, "darkred", label="Mato Grosso")
+plt.plot(counts.PA, "lime", label="Pará")
+plt.plot(counts.RO, "cyan", label="Rondônia")
+plt.plot(counts.RR, "black", label="Roraima")
+plt.plot(counts.TO, "orange", label="Tocantins")
+
+plt.legend()
+plt.ylabel("Cloud cover (%)", fontsize=14)
+plt.xlabel("Season", fontsize=14)
+```
+
+
+
+
+    Text(0.5, 0, 'Season')
+
+
+
+
+![png](output_108_1.png)
+
 
 [<p align="left"> **<< Previous notebook** </p>](./2_Basic_processing.md)
 
