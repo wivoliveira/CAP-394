@@ -6221,7 +6221,7 @@ for month in months:
                                style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
 
     folium.LayerControl().add_to(m)
-    m.save('Output/Prints_S2_Monthly_Prob_30/Prob_30perc_'+month+'.html')
+    #m.save('Output/Prints_S2_Monthly_Prob_30/Prob_30perc_'+month+'.html')
 #m
 ```
 
