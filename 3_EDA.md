@@ -285,7 +285,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3d6657d160>
+    <folium.map.LayerControl at 0x3b196d2160>
 
 
 
@@ -464,7 +464,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3d5d48c550>
+    <folium.map.LayerControl at 0x3b1609f2b0>
 
 
 
@@ -871,7 +871,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3d665899b0>
+    <folium.map.LayerControl at 0x3b199011d0>
 
 
 
@@ -1304,7 +1304,7 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3d66587240>
+    <folium.map.LayerControl at 0x3b19a30a20>
 
 
 
@@ -3330,9 +3330,6 @@ except Exception as e:
     print(str(e))
 ```
 
-    The dataframe was written to file!
-    
-
 ## Analysis of scene acquisition statistics
 
 
@@ -3496,7 +3493,7 @@ plt.show()
 ```
 
 
-![png](output_65_0.png)
+    <Figure size 1200x600 with 1 Axes>
 
 
 In addition, the following table presents the number of available scenes for the area of interest, considering ten cloud clover (CC) levels:
@@ -3975,7 +3972,7 @@ counts.loc[('TO')].boxplot()
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x3d67d7e7f0>
+    <matplotlib.axes._subplots.AxesSubplot at 0x3b1b545fd0>
 
 
 
@@ -3994,7 +3991,7 @@ df_wrs_CC = df_wrs.copy()
 
 
 ```python
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for m in np.arange(0,12,1):
     # Creating a new column to store the monthly average cloud cover
@@ -4263,7 +4260,7 @@ df_wrs_CC.head(10)
 
 
 ```python
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for m in np.arange(0,12,1):
     # Creating a new column to store the monthly average cloud cover
@@ -4310,7 +4307,7 @@ The next figure illustrates the monthly average cloud cover level of Landsat-8 o
 
 
 ```python
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for month in months:
     # Get the center of the map
@@ -4368,7 +4365,7 @@ for month in months:
                                style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
 
     folium.LayerControl().add_to(m)
-    #m.save('Output/Prints_Montly_avg_CC/Average_CC_'+month+'.html')
+    #m.save('Output/Prints_Monthly_avg_CC/Average_CC_'+month+'.html')
 #m
 ```
 
@@ -4385,7 +4382,7 @@ df_S2_zones_CC = df_S2_zones.copy()
 
 
 ```python
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for m in np.arange(0,12,1):
     # Creating a new column to store the monthly average cloud cover
@@ -4642,7 +4639,7 @@ df_S2_zones_CC.head(10)
 
 
 ```python
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for m in np.arange(0,12,1):
     # Creating a new column to store the monthly average cloud cover
@@ -4689,7 +4686,7 @@ The next figure illustrates the monthly average cloud cover level of Landsat-8 o
 
 
 ```python
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for month in months:
     # Get the center of the map
@@ -4747,7 +4744,7 @@ for month in months:
                                style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
 
     folium.LayerControl().add_to(m)
-    #m.save('Output/Prints_S2_Montly_avg_CC/S2_Average_CC_'+month+'.html')
+    #m.save('Output/Prints_S2_Monthly_avg_CC/S2_Average_CC_'+month+'.html')
 #m
 ```
 
@@ -5602,6 +5599,633 @@ plt.xlabel("Season", fontsize=14)
 
 ![png](output_108_1.png)
 
+
+### Probability of acquiring a Landsat-8 scene with less than 30% cloud cover
+
+
+```python
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+threshold = 30 # 30%
+
+for m in np.arange(0,12,1):
+    # Creating a new column to store the monthly average cloud cover
+    colName = 'ProbCC_30_'+months[m]
+    df_wrs_CC[colName] = "None"
+    
+    for i, row in df_wrs_CC.iterrows():
+        N = tidy_data.CloudCover.loc[(tidy_data.WRSPath == row.PATH) & (tidy_data.WRSRow == row.ROW) &
+                                       (tidy_data.AcquisitionDate.dt.month == m+1)].count()
+        N_success = tidy_data.CloudCover.loc[(tidy_data.WRSPath == row.PATH) & (tidy_data.WRSRow == row.ROW) &
+                                       (tidy_data.AcquisitionDate.dt.month == m+1) &
+                                       (tidy_data.CloudCover <= threshold)].count()
+        Prob = round((N_success/N)*100,2)
+        
+        df_wrs_CC.loc[(df_wrs_CC.PATH == row.PATH) & (df_wrs_CC.ROW == row.ROW), colName] = Prob
+```
+
+
+```python
+df_wrs_CC[['PATH', 'ROW', 'STATE', 'ProbCC_30_Jan', 'ProbCC_30_Feb', 'ProbCC_30_Mar', 'ProbCC_30_Apr', 'ProbCC_30_May', 'ProbCC_30_Jun', 'ProbCC_30_Jul', 'ProbCC_30_Aug', 'ProbCC_30_Sep', 'ProbCC_30_Oct', 'ProbCC_30_Nov', 'ProbCC_30_Dec']].head(10)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PATH</th>
+      <th>ROW</th>
+      <th>STATE</th>
+      <th>ProbCC_30_Jan</th>
+      <th>ProbCC_30_Feb</th>
+      <th>ProbCC_30_Mar</th>
+      <th>ProbCC_30_Apr</th>
+      <th>ProbCC_30_May</th>
+      <th>ProbCC_30_Jun</th>
+      <th>ProbCC_30_Jul</th>
+      <th>ProbCC_30_Aug</th>
+      <th>ProbCC_30_Sep</th>
+      <th>ProbCC_30_Oct</th>
+      <th>ProbCC_30_Nov</th>
+      <th>ProbCC_30_Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>56</th>
+      <td>1</td>
+      <td>57</td>
+      <td>RR</td>
+      <td>18.18</td>
+      <td>18.18</td>
+      <td>16.67</td>
+      <td>0</td>
+      <td>7.69</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.33</td>
+      <td>18.18</td>
+      <td>25</td>
+      <td>0</td>
+      <td>8.33</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>1</td>
+      <td>58</td>
+      <td>RR</td>
+      <td>18.18</td>
+      <td>0</td>
+      <td>16.67</td>
+      <td>0</td>
+      <td>7.69</td>
+      <td>0</td>
+      <td>7.69</td>
+      <td>0</td>
+      <td>0</td>
+      <td>9.09</td>
+      <td>0</td>
+      <td>16.67</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>1</td>
+      <td>59</td>
+      <td>AM</td>
+      <td>18.18</td>
+      <td>27.27</td>
+      <td>41.67</td>
+      <td>0</td>
+      <td>7.69</td>
+      <td>7.14</td>
+      <td>0</td>
+      <td>25</td>
+      <td>27.27</td>
+      <td>18.18</td>
+      <td>36.36</td>
+      <td>16.67</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>1</td>
+      <td>60</td>
+      <td>AM</td>
+      <td>27.27</td>
+      <td>18.18</td>
+      <td>16.67</td>
+      <td>15.38</td>
+      <td>15.38</td>
+      <td>14.29</td>
+      <td>0</td>
+      <td>41.67</td>
+      <td>27.27</td>
+      <td>25</td>
+      <td>36.36</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>1</td>
+      <td>61</td>
+      <td>AM</td>
+      <td>18.18</td>
+      <td>9.09</td>
+      <td>36.36</td>
+      <td>15.38</td>
+      <td>23.08</td>
+      <td>14.29</td>
+      <td>15.38</td>
+      <td>33.33</td>
+      <td>45.45</td>
+      <td>25</td>
+      <td>36.36</td>
+      <td>41.67</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>1</td>
+      <td>62</td>
+      <td>AM</td>
+      <td>0</td>
+      <td>27.27</td>
+      <td>18.18</td>
+      <td>15.38</td>
+      <td>7.69</td>
+      <td>21.43</td>
+      <td>30.77</td>
+      <td>41.67</td>
+      <td>36.36</td>
+      <td>41.67</td>
+      <td>18.18</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>1</td>
+      <td>63</td>
+      <td>AM</td>
+      <td>0</td>
+      <td>9.09</td>
+      <td>27.27</td>
+      <td>0</td>
+      <td>15.38</td>
+      <td>28.57</td>
+      <td>53.85</td>
+      <td>50</td>
+      <td>54.55</td>
+      <td>16.67</td>
+      <td>18.18</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>1</td>
+      <td>64</td>
+      <td>AM</td>
+      <td>18.18</td>
+      <td>9.09</td>
+      <td>18.18</td>
+      <td>0</td>
+      <td>15.38</td>
+      <td>28.57</td>
+      <td>61.54</td>
+      <td>58.33</td>
+      <td>45.45</td>
+      <td>16.67</td>
+      <td>18.18</td>
+      <td>16.67</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>1</td>
+      <td>65</td>
+      <td>AM</td>
+      <td>0</td>
+      <td>18.18</td>
+      <td>8.33</td>
+      <td>15.38</td>
+      <td>15.38</td>
+      <td>42.86</td>
+      <td>61.54</td>
+      <td>50</td>
+      <td>54.55</td>
+      <td>16.67</td>
+      <td>20</td>
+      <td>9.09</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>1</td>
+      <td>66</td>
+      <td>AM</td>
+      <td>9.09</td>
+      <td>18.18</td>
+      <td>0</td>
+      <td>7.69</td>
+      <td>30.77</td>
+      <td>71.43</td>
+      <td>84.62</td>
+      <td>75</td>
+      <td>81.82</td>
+      <td>30</td>
+      <td>20</td>
+      <td>18.18</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+for month in months:
+    # Get the center of the map
+    xy = np.asarray(bounding_box_AM.centroid.xy).squeeze()
+    center = list(xy[::-1])
+
+    # Select a zoom
+    zoom = 5
+
+    # Create the most basic OSM folium map
+    m = folium.Map(location=center, zoom_start=zoom, control_scale=True)
+
+    # Iterate through each Polygon of paths and rows intersecting the area
+    for i, row in df_wrs_CC.iterrows():    
+        # Create a string to save the path and row of this Polygon    
+        name = 'path: %03d, row: %03d, CC: %f' % (row.PATH, row.ROW, row['ProbCC_30_'+month])
+
+        if(row['ProbCC_30_'+month] <= 10):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#FCFBFD', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 20):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#F0E1FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 30):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#D9B3FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 40):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#C387FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 50):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#B469FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 60):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#A143FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 70):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#8E1DFF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 80):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#7B00F6', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 90):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#6900D2', 'fillOpacity': 1, 'weight': 2})
+        else: #(row['ProbCC_30_'+month] <= 100):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#3F007E', 'fillOpacity': 1, 'weight': 2})
+
+        # Add a folium Popup object with the name string
+        g.add_child(folium.Popup(name))
+        # Add the object to the map
+        g.add_to(m)
+
+    m.add_child(folium.GeoJson(BR_Amazon_Estates.boundary.__geo_interface__, name='Area of Study', 
+                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
+
+    folium.LayerControl().add_to(m)
+    #m.save('Output/Prints_L8_Monthly_Prob_30/Prob_30perc_'+month+'.html')
+#m
+```
+
+<p align="center"><img src="./images/Figure_L8_monthly_prob_30.png" width="100%"></p>
+
+### Probability of acquiring a Sentinel-2 scene with less than 30% cloud cover
+
+
+```python
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+threshold = 30 # 30%
+
+for m in np.arange(0,12,1):
+    # Creating a new column to store the monthly average cloud cover
+    colName = 'ProbCC_30_'+months[m]
+    df_S2_zones_CC[colName] = "None"
+    
+    for i, row in df_S2_zones_CC.iterrows():
+        N = tidy_data.CloudCover.loc[(tidy_data.TileNumber == row.NAME) &
+                                       (tidy_data.AcquisitionDate.dt.month == m+1)].count()
+        N_success = tidy_data.CloudCover.loc[(tidy_data.TileNumber == row.NAME) &
+                                       (tidy_data.AcquisitionDate.dt.month == m+1) &
+                                       (tidy_data.CloudCover <= threshold)].count()
+        Prob = round((N_success/N)*100,2)
+        
+        df_S2_zones_CC.loc[(df_S2_zones_CC.NAME == row.NAME), colName] = Prob
+```
+
+
+```python
+df_S2_zones_CC[['NAME', 'STATE', 'ProbCC_30_Jan', 'ProbCC_30_Feb', 'ProbCC_30_Mar', 'ProbCC_30_Apr', 'ProbCC_30_May', 'ProbCC_30_Jun', 'ProbCC_30_Jul', 'ProbCC_30_Aug', 'ProbCC_30_Sep', 'ProbCC_30_Oct', 'ProbCC_30_Nov', 'ProbCC_30_Dec']].head(10)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NAME</th>
+      <th>STATE</th>
+      <th>ProbCC_30_Jan</th>
+      <th>ProbCC_30_Feb</th>
+      <th>ProbCC_30_Mar</th>
+      <th>ProbCC_30_Apr</th>
+      <th>ProbCC_30_May</th>
+      <th>ProbCC_30_Jun</th>
+      <th>ProbCC_30_Jul</th>
+      <th>ProbCC_30_Aug</th>
+      <th>ProbCC_30_Sep</th>
+      <th>ProbCC_30_Oct</th>
+      <th>ProbCC_30_Nov</th>
+      <th>ProbCC_30_Dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>16758</th>
+      <td>18LXR</td>
+      <td>AC</td>
+      <td>18.75</td>
+      <td>18.52</td>
+      <td>3.7</td>
+      <td>19.23</td>
+      <td>17.39</td>
+      <td>57.89</td>
+      <td>81.48</td>
+      <td>59.09</td>
+      <td>53.33</td>
+      <td>33.33</td>
+      <td>13.04</td>
+      <td>14.29</td>
+    </tr>
+    <tr>
+      <th>16766</th>
+      <td>18LYQ</td>
+      <td>AC</td>
+      <td>8.33</td>
+      <td>6.67</td>
+      <td>14.29</td>
+      <td>14.29</td>
+      <td>50</td>
+      <td>60</td>
+      <td>80</td>
+      <td>33.33</td>
+      <td>62.5</td>
+      <td>18.18</td>
+      <td>9.09</td>
+      <td>15.38</td>
+    </tr>
+    <tr>
+      <th>16767</th>
+      <td>18LYR</td>
+      <td>AC</td>
+      <td>7.69</td>
+      <td>6.25</td>
+      <td>14.29</td>
+      <td>28.57</td>
+      <td>45.45</td>
+      <td>40</td>
+      <td>78.57</td>
+      <td>25</td>
+      <td>75</td>
+      <td>27.27</td>
+      <td>0</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>16775</th>
+      <td>18LZQ</td>
+      <td>AC</td>
+      <td>11.54</td>
+      <td>10.71</td>
+      <td>8.57</td>
+      <td>21.43</td>
+      <td>48</td>
+      <td>45</td>
+      <td>91.67</td>
+      <td>55</td>
+      <td>80</td>
+      <td>52.63</td>
+      <td>4.17</td>
+      <td>3.7</td>
+    </tr>
+    <tr>
+      <th>16776</th>
+      <td>18LZR</td>
+      <td>AC</td>
+      <td>24</td>
+      <td>0</td>
+      <td>16.13</td>
+      <td>25.93</td>
+      <td>47.62</td>
+      <td>57.14</td>
+      <td>90.91</td>
+      <td>55</td>
+      <td>80</td>
+      <td>44.44</td>
+      <td>18.52</td>
+      <td>7.14</td>
+    </tr>
+    <tr>
+      <th>16818</th>
+      <td>18MXS</td>
+      <td>AC</td>
+      <td>13.33</td>
+      <td>11.54</td>
+      <td>7.14</td>
+      <td>17.86</td>
+      <td>20.83</td>
+      <td>52.63</td>
+      <td>68</td>
+      <td>45.45</td>
+      <td>62.5</td>
+      <td>31.58</td>
+      <td>16.67</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>16819</th>
+      <td>18MXT</td>
+      <td>AM</td>
+      <td>12.5</td>
+      <td>7.41</td>
+      <td>7.14</td>
+      <td>14.81</td>
+      <td>21.05</td>
+      <td>40</td>
+      <td>57.89</td>
+      <td>31.82</td>
+      <td>62.5</td>
+      <td>31.82</td>
+      <td>28</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>16827</th>
+      <td>18MYS</td>
+      <td>AC</td>
+      <td>26.67</td>
+      <td>6.67</td>
+      <td>15.38</td>
+      <td>14.29</td>
+      <td>50</td>
+      <td>40</td>
+      <td>72.73</td>
+      <td>25</td>
+      <td>62.5</td>
+      <td>27.27</td>
+      <td>9.09</td>
+      <td>15.38</td>
+    </tr>
+    <tr>
+      <th>16828</th>
+      <td>18MYT</td>
+      <td>AM</td>
+      <td>20</td>
+      <td>6.25</td>
+      <td>15.38</td>
+      <td>14.29</td>
+      <td>33.33</td>
+      <td>30.77</td>
+      <td>66.67</td>
+      <td>16.67</td>
+      <td>37.5</td>
+      <td>25</td>
+      <td>9.09</td>
+      <td>15.38</td>
+    </tr>
+    <tr>
+      <th>16829</th>
+      <td>18MYU</td>
+      <td>AM</td>
+      <td>7.14</td>
+      <td>11.54</td>
+      <td>0</td>
+      <td>14.29</td>
+      <td>30.43</td>
+      <td>31.82</td>
+      <td>81.82</td>
+      <td>50</td>
+      <td>72.22</td>
+      <td>52.38</td>
+      <td>11.54</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+
+for month in months:
+    # Get the center of the map
+    xy = np.asarray(bounding_box_AM.centroid.xy).squeeze()
+    center = list(xy[::-1])
+
+    # Select a zoom
+    zoom = 5
+
+    # Create the most basic OSM folium map
+    m = folium.Map(location=center, zoom_start=zoom, control_scale=True)
+
+    # Iterate through each Polygon of paths and rows intersecting the area
+    for i, row in df_S2_zones_CC.iterrows():    
+        # Create a string to save the path and row of this Polygon    
+        name = 'Tile: %s, CC: %f' % (row.NAME, row['ProbCC_30_'+month])
+
+        if(row['ProbCC_30_'+month] <= 10):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#FCFBFD', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 20):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#F0E1FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 30):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#D9B3FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 40):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: { 
+                                                'color': '#504C8F', 'fillColor': '#C387FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 50):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#B469FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 60):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#A143FF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 70):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#8E1DFF', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 80):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#7B00F6', 'fillOpacity': 1, 'weight': 2})
+        elif(row['ProbCC_30_'+month] <= 90):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#6900D2', 'fillOpacity': 1, 'weight': 2})
+        else: #(row['ProbCC_30_'+month] <= 100):
+            g = folium.GeoJson(row.geometry.__geo_interface__, name=name, style_function=lambda y: {
+                                                'color': '#504C8F', 'fillColor': '#3F007E', 'fillOpacity': 1, 'weight': 2})
+
+        # Add a folium Popup object with the name string
+        g.add_child(folium.Popup(name))
+        # Add the object to the map
+        g.add_to(m)
+
+    m.add_child(folium.GeoJson(BR_Amazon_Estates.boundary.__geo_interface__, name='Area of Study', 
+                               style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
+
+    folium.LayerControl().add_to(m)
+    m.save('Output/Prints_S2_Monthly_Prob_30/Prob_30perc_'+month+'.html')
+#m
+```
+
+<p align="center"><img src="./images/Figure_S2_monthly_prob_30.png" width="100%"></p>
 
 [<p align="left"> **<< Previous notebook** </p>](./2_Basic_processing.md)
 
