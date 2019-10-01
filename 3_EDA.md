@@ -39,7 +39,7 @@ from glob import glob
 
 ### Analysis of the Landsat-8 grids (path/row) that intersect the area of interest
 
-At this moment, we consider all grids that intersect the area do study, regardless of the percentage of intersection. For that reason, the following analysis might include grids that present most of their area outside the area of study.
+At first, we considered all grids that intersect the area do study, regardless of the percentage of intersection. For that reason, the following analysis might include grids that present most of their area outside the area of study.
 
 
 ```python
@@ -54,19 +54,7 @@ wrs.head(10)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -221,7 +209,6 @@ bounding_box_AM = BR_Amazon_Estates.unary_union
 
 ```python
 # We can check which Polygons of the WRS-2 system intersects the area of interest.
-
 wrs_intersection = wrs[wrs.intersects(bounding_box_AM)]
 paths, rows = wrs_intersection['PATH'].values, wrs_intersection['ROW'].values
 
@@ -233,7 +220,7 @@ print("There are ", paths.size, " WRS grids that intersect the study area")
 
 #### Nothern and Southern hemisphere
 
-The Landsat framing is uniform for each orbit. The adjacent east-west scenes have scene center locations at the same nominal latitude. A notation of Row numbers can, therefore, be applied to identify all scenes occurring at the same latitude. 
+The Landsat framing is uniform for each orbit. The adjacent east-west scenes have scene center locations at the same nominal latitude. Therefore, a notation of Row numbers can be applied to identify all scenes occurring at the same latitude. 
 
 Row 060 corresponds to latitude 0 (equator). Row 059 is immediately north of this.
 
@@ -285,11 +272,11 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3b196d2160>
+    <folium.map.LayerControl at 0x8c33ef8160>
 
 
 
-Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github.
+<b>Obs.:</b> Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github. The interactive map (html file) can be found in the output folder.
 <p align="center"><img src="./images/LandsatGrids.PNG" width="100%"></p>
 
 
@@ -320,19 +307,7 @@ S2_zones.head(10)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -402,8 +377,6 @@ S2_zones.head(10)
 
 
 ```python
-# We can check which Polygons of the WRS-2 system intersects the area of interest.
-
 S2_zones_intersection = S2_zones[S2_zones.intersects(bounding_box_AM)]
 tiles = S2_zones_intersection['Name'].values
 
@@ -464,11 +437,11 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3b1609f2b0>
+    <folium.map.LayerControl at 0x8c376c4780>
 
 
 
-Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github.
+<b>Obs.:</b> Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github. The interactive map (html file) can be found in the output folder.
 <p align="center"><img src="./images/SentinelTiles.PNG" width="100%"></p>
 
 
@@ -495,19 +468,7 @@ BR_Amazon_Estates
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -688,7 +649,7 @@ BR_Amazon_Estates
 
 
 
-First, we create a list containing the geocode and name of all states described in the shapefile. Then, we use this list to extract the boundaries of each state and identify the number of scenes that intersects each one of them.
+First, we created a list containing the geocode and name of all states described in the shapefile. Then, we used this list to extract the boundaries of each state and identify the number of scenes that intersects each one of them.
 
 
 ```python
@@ -698,7 +659,8 @@ states_geocodes = list([BR_Amazon_Estates.CODIGO, BR_Amazon_Estates.NOME])
 
 
 ```python
-print("Number of Landsat-8 and Sentinel-2 grids that intersect each Brazilian state. Obs.: Note that states that intersect more than one state are counted more than once.")
+print("Number of Landsat-8 and Sentinel-2 grids that intersect each Brazilian state.")
+print("Obs.: Note that states that intersect more than one state are counted more than once.")
 
 for code, name in zip(states_geocodes[0], states_geocodes[1]):    
     # Some names need to be decoded
@@ -721,7 +683,8 @@ for code, name in zip(states_geocodes[0], states_geocodes[1]):
     print("There are ", paths.size, " WRS grids and ", tiles.size, " Sentinel-2 zones that intersect the Brazilian state of ", name)
 ```
 
-    Number of Landsat-8 and Sentinel-2 grids that intersect each Brazilian state. Obs.: Note that states that intersect more than one state are counted more than once.
+    Number of Landsat-8 and Sentinel-2 grids that intersect each Brazilian state.
+    Obs.: Note that states that intersect more than one state are counted more than once.
     There are  20  WRS grids and  41  Sentinel-2 zones that intersect the Brazilian state of  Rond�nia
     There are  16  WRS grids and  33  Sentinel-2 zones that intersect the Brazilian state of  ACRE
     There are  14  WRS grids and  32  Sentinel-2 zones that intersect the Brazilian state of  AMAP�
@@ -769,7 +732,7 @@ df_S2_zones['STATE'] = "None"
 df_S2_zones['STATE_GEOCODE'] = "None"
 ```
 
-First, we analyse only the Landsat-8 data.
+First, we analysed only the Landsat-8 data.
 
 
 ```python
@@ -871,11 +834,11 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3b199011d0>
+    <folium.map.LayerControl at 0x8c3772e278>
 
 
 
-Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github. You can also use the 'wrs_perState.html' file to analyse this result.
+<b>Obs.:</b> Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github. The interactive map (html file) can be found in the output folder.
 <p align="center"><img src="./images/LandsatGrids_perState.PNG" width="90%"></p>
 
 
@@ -887,19 +850,7 @@ df_grid_perState
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -990,7 +941,7 @@ df_grid_perState
 
 
 
-In addition, the 'df_wrs' dataframe describes which Brazilian state each grid covers (at least most of their area). This dataframe also identifies which grids do not present the minimum coverage area required in this study.
+In addition, the 'df_wrs' dataframe describes which Brazilian state each grid covers the most. This dataframe also identifies which grids do not present the minimum coverage area required in this study.
 
 
 ```python
@@ -1001,19 +952,7 @@ df_wrs.head(20)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1304,11 +1243,11 @@ folium.LayerControl().add_to(m)
 
 
 
-    <folium.map.LayerControl at 0x3b19a30a20>
+    <folium.map.LayerControl at 0x8c37739b38>
 
 
 
-Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github. You can also use the 'tiles_perState.html' file to analyse this result.
+<b>Obs.:</b> Github can not render folium maps. Therefore, it was necessary to save the result as an image to include on Github. The interactive map (html file) can be found in the output folder.
 <p align="center"><img src="./images/Sentinel2Zones_perState.PNG" width="90%"></p>
 
 #### Answer to question 2: 
@@ -1324,19 +1263,7 @@ df_grid_perState
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1431,26 +1358,14 @@ In addition, the 'df_S2_zones' dataframe describes which Brazilian state each gr
 
 
 ```python
-df_S2_zones.head(629)
+df_S2_zones.head(10)
 ```
 
 
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1532,366 +1447,8 @@ df_S2_zones.head(629)
       <td>AM</td>
       <td>13</td>
     </tr>
-    <tr>
-      <th>16820</th>
-      <td>18MXU</td>
-      <td>POLYGON Z ((-74.09734193399999 -5.427551341999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>16827</th>
-      <td>18MYS</td>
-      <td>POLYGON Z ((-73.18898285999995 -7.233684263999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>16828</th>
-      <td>18MYT</td>
-      <td>POLYGON Z ((-73.19235760999999 -6.329352865999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16829</th>
-      <td>18MYU</td>
-      <td>POLYGON Z ((-73.19527224699993 -5.425531019999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16830</th>
-      <td>18MYV</td>
-      <td>POLYGON Z ((-73.19773390599994 -4.521138360999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16831</th>
-      <td>18MZA</td>
-      <td>POLYGON Z ((-72.29981700799993 -3.614481509999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>16836</th>
-      <td>18MZS</td>
-      <td>POLYGON Z ((-72.28369026099995 -7.229185751999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16837</th>
-      <td>18MZT</td>
-      <td>POLYGON Z ((-72.28874778199997 -6.325421474999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16838</th>
-      <td>18MZU</td>
-      <td>POLYGON Z ((-72.29311578199997 -5.422164528999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16839</th>
-      <td>18MZV</td>
-      <td>POLYGON Z ((-72.29680494099995 -4.518335502999...</td>
-      <td>AM</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>17665</th>
-      <td>19LBJ</td>
-      <td>POLYGON Z ((-71.73603265499997 -9.939675515999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>17666</th>
-      <td>19LBK</td>
-      <td>POLYGON Z ((-71.72887174199997 -9.036045362999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>17667</th>
-      <td>19LBL</td>
-      <td>POLYGON Z ((-71.72242337099993 -8.132907839999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>17673</th>
-      <td>19LCH</td>
-      <td>POLYGON Z ((-70.82955723299995 -10.85004360999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>17674</th>
-      <td>19LCJ</td>
-      <td>POLYGON Z ((-70.82429937999996 -9.945890159999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>17675</th>
-      <td>19LCK</td>
-      <td>POLYGON Z ((-70.81952069299996 -9.041685446999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>17676</th>
-      <td>19LCL</td>
-      <td>POLYGON Z ((-70.81521753299995 -8.137976444999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>17682</th>
-      <td>19LDH</td>
-      <td>POLYGON Z ((-69.91526602599998 -10.85412030299...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>17683</th>
-      <td>19LDJ</td>
-      <td>POLYGON Z ((-69.91263436399998 -9.949620171999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>17684</th>
-      <td>19LDK</td>
-      <td>POLYGON Z ((-69.91024254299998 -9.045070601999...</td>
-      <td>AC</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>21520</th>
-      <td>23MMM</td>
-      <td>POLYGON Z ((-45.90616764599997 -7.236383230999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21521</th>
-      <td>23MMN</td>
-      <td>POLYGON Z ((-45.90447820099996 -6.331711572999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21522</th>
-      <td>23MMP</td>
-      <td>POLYGON Z ((-45.90301909899995 -5.427550802999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21523</th>
-      <td>23MMQ</td>
-      <td>POLYGON Z ((-45.90178676699998 -4.522819979999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21524</th>
-      <td>23MMR</td>
-      <td>POLYGON Z ((-45.90078061599996 -3.618066326999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21525</th>
-      <td>23MMS</td>
-      <td>POLYGON Z ((-45.89999980099998 -2.713837142999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21526</th>
-      <td>23MMT</td>
-      <td>POLYGON Z ((-45.89944241899997 -1.809051473999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21527</th>
-      <td>23MMU</td>
-      <td>POLYGON Z ((-45.89910831799995 -0.904256642999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21529</th>
-      <td>23MNM</td>
-      <td>POLYGON Z ((-45.00018116899997 -7.237284699999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>21530</th>
-      <td>23MNN</td>
-      <td>POLYGON Z ((-45.00018083099997 -6.332499393999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21531</th>
-      <td>23MNP</td>
-      <td>POLYGON Z ((-45.00018053899998 -5.428225419999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21532</th>
-      <td>23MNQ</td>
-      <td>POLYGON Z ((-45.00018029299997 -4.523381647999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21533</th>
-      <td>23MNR</td>
-      <td>POLYGON Z ((-45.00018009199994 -3.618515314999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21534</th>
-      <td>23MNS</td>
-      <td>POLYGON Z ((-45.00017993599994 -2.714173730999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21535</th>
-      <td>23MNT</td>
-      <td>POLYGON Z ((-45.00017982399999 -1.809275754999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21536</th>
-      <td>23MNU</td>
-      <td>POLYGON Z ((-45.00017975699996 -0.904368722999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>21539</th>
-      <td>23MPN</td>
-      <td>POLYGON Z ((-44.09588341499995 -6.331712202999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21540</th>
-      <td>23MPP</td>
-      <td>POLYGON Z ((-44.09734193399999 -5.427551341999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21541</th>
-      <td>23MPQ</td>
-      <td>POLYGON Z ((-44.09857377399993 -4.522820428999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21542</th>
-      <td>23MPR</td>
-      <td>POLYGON Z ((-44.09957952199994 -3.618066685999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21543</th>
-      <td>23MPS</td>
-      <td>POLYGON Z ((-44.10036002499993 -2.713837411999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21544</th>
-      <td>23MPT</td>
-      <td>POLYGON Z ((-44.10091718399997 -1.809051652999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21548</th>
-      <td>23MQN</td>
-      <td>POLYGON Z ((-43.19235760999993 -6.329352865999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th>21549</th>
-      <td>23MQP</td>
-      <td>POLYGON Z ((-43.19527224699993 -5.425531019999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21550</th>
-      <td>23MQQ</td>
-      <td>POLYGON Z ((-43.19773390599994 -4.521138360999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21551</th>
-      <td>23MQR</td>
-      <td>POLYGON Z ((-43.19974375599998 -3.616722068999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21552</th>
-      <td>23MQS</td>
-      <td>POLYGON Z ((-43.20130348599997 -2.712829405999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21553</th>
-      <td>23MQT</td>
-      <td>POLYGON Z ((-43.20241689499994 -1.808379981999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21561</th>
-      <td>23MRS</td>
-      <td>POLYGON Z ((-42.30215450599997 -2.711149745999...</td>
-      <td>MA</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>21562</th>
-      <td>23MRT</td>
-      <td>POLYGON Z ((-42.30382312599994 -1.807260761999...</td>
-      <td>None</td>
-      <td>None</td>
-    </tr>
   </tbody>
 </table>
-<p>629 rows × 4 columns</p>
 </div>
 
 
@@ -1945,19 +1502,7 @@ tidy_data.head(5)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2115,19 +1660,7 @@ tidy_data
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3317,19 +2850,6 @@ tidy_data
 
 
 
-### Writing the tidy dataframe to file
-
-
-```python
-filename = 'Output/Metadata/Metadata_L8_S2_tidy_updated.csv'
-
-try:
-    tidy_data.to_csv(filename, sep=',', index=False, encoding='utf-8')
-    print("The dataframe was written to file!")
-except Exception as e:
-    print(str(e))
-```
-
 ## Analysis of scene acquisition statistics
 
 
@@ -3369,19 +2889,7 @@ counts
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3449,6 +2957,7 @@ counts
 
 ```python
 import numpy as np
+%matplotlib inline
 import matplotlib.pyplot as plt
 
 N = 7
@@ -3493,7 +3002,7 @@ plt.show()
 ```
 
 
-    <Figure size 1200x600 with 1 Axes>
+![png](output_63_0.png)
 
 
 In addition, the following table presents the number of available scenes for the area of interest, considering ten cloud clover (CC) levels:
@@ -3549,19 +3058,7 @@ counts_cp.round(2)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -3972,12 +3469,12 @@ counts.loc[('TO')].boxplot()
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x3b1b545fd0>
+    <matplotlib.axes._subplots.AxesSubplot at 0x8c395ce5f8>
 
 
 
 
-![png](output_72_1.png)
+![png](output_70_1.png)
 
 
 ### Monthly average cloud cover in Landsat observations
@@ -4015,19 +3512,7 @@ df_wrs_CC.head(10)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -4041,7 +3526,7 @@ df_wrs_CC.head(10)
       <th>Avg_CC_Feb</th>
       <th>Avg_CC_Mar</th>
       <th>Avg_CC_Apr</th>
-      <th>Avg_CC_Mai</th>
+      <th>Avg_CC_May</th>
       <th>Avg_CC_Jun</th>
       <th>Avg_CC_Jul</th>
       <th>Avg_CC_Aug</th>
@@ -4263,7 +3748,7 @@ df_wrs_CC.head(10)
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for m in np.arange(0,12,1):
-    # Creating a new column to store the monthly average cloud cover
+    # Creating a new column to store the monthly average cloud cover level
     colName = 'CC_Level_'+months[m]
     df_wrs_CC[colName] = "None"
     
@@ -4405,19 +3890,7 @@ df_S2_zones_CC.head(10)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -4430,7 +3903,7 @@ df_S2_zones_CC.head(10)
       <th>Avg_CC_Feb</th>
       <th>Avg_CC_Mar</th>
       <th>Avg_CC_Apr</th>
-      <th>Avg_CC_Mai</th>
+      <th>Avg_CC_May</th>
       <th>Avg_CC_Jun</th>
       <th>Avg_CC_Jul</th>
       <th>Avg_CC_Aug</th>
@@ -4642,7 +4115,7 @@ df_S2_zones_CC.head(10)
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 for m in np.arange(0,12,1):
-    # Creating a new column to store the monthly average cloud cover
+    # Creating a new column to store the monthly average cloud cover level
     colName = 'CC_Level_'+months[m]
     df_S2_zones_CC[colName] = "None"
     
@@ -4843,19 +4316,7 @@ df_wrs_CC[['PATH', 'ROW', 'Avg_CC_Summer', 'CC_Level_Summer', 'Avg_CC_Autumn', '
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -5061,19 +4522,7 @@ df_S2_zones_CC[['NAME', 'Avg_CC_Summer', 'CC_Level_Summer', 'Avg_CC_Autumn', 'CC
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -5230,19 +4679,7 @@ counts.round(2)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -5482,19 +4919,7 @@ counts
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -5597,7 +5022,7 @@ plt.xlabel("Season", fontsize=14)
 
 
 
-![png](output_108_1.png)
+![png](output_106_1.png)
 
 
 ### Probability of acquiring a Landsat-8 scene with less than 30% cloud cover
@@ -5608,7 +5033,7 @@ months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 
 threshold = 30 # 30%
 
 for m in np.arange(0,12,1):
-    # Creating a new column to store the monthly average cloud cover
+    # Creating a new column to store the monthly probability of getting a scene with less than 30% cloud cover
     colName = 'ProbCC_30_'+months[m]
     df_wrs_CC[colName] = "None"
     
@@ -5632,19 +5057,7 @@ df_wrs_CC[['PATH', 'ROW', 'STATE', 'ProbCC_30_Jan', 'ProbCC_30_Feb', 'ProbCC_30_
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -5951,19 +5364,7 @@ df_S2_zones_CC[['NAME', 'STATE', 'ProbCC_30_Jan', 'ProbCC_30_Feb', 'ProbCC_30_Ma
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -6221,11 +5622,61 @@ for month in months:
                                style_function=lambda x: {'color': 'black', 'fillOpacity': 0, 'alpha': 0, 'weight': 1}))
 
     folium.LayerControl().add_to(m)
-    #m.save('Output/Prints_S2_Monthly_Prob_30/Prob_30perc_'+month+'.html')
+    #.save('Output/Prints_S2_Monthly_Prob_30/Prob_30perc_'+month+'.html')
 #m
 ```
 
 <p align="center"><img src="./images/Figure_S2_monthly_prob_30.png" width="100%"></p>
+
+### Writing the dataframes to file after all alterations
+
+#### Tidy dataframe
+
+
+```python
+filename = 'Output/Metadata/Metadata_L8_S2_tidy_updated.csv'
+
+try:
+    tidy_data.to_csv(filename, sep=',', index=False, encoding='utf-8')
+    print("The dataframe was written to file!")
+except Exception as e:
+    print(str(e))
+```
+
+    The dataframe was written to file!
+    
+
+#### Dataframe with details on each Landsat-8 grid
+
+
+```python
+filename = 'Output/Metadata/df_wrs_CC.csv'
+
+try:
+    df_wrs_CC.to_csv(filename, sep=',', index=False, encoding='utf-8')
+    print("The dataframe was written to file!")
+except Exception as e:
+    print(str(e))
+```
+
+    The dataframe was written to file!
+    
+
+#### Dataframe with details on each Sentinel-2 tile
+
+
+```python
+filename = 'Output/Metadata/df_S2_zones_CC.csv'
+
+try:
+    df_S2_zones_CC.to_csv(filename, sep=',', index=False, encoding='utf-8')
+    print("The dataframe was written to file!")
+except Exception as e:
+    print(str(e))
+```
+
+    The dataframe was written to file!
+    
 
 [<p align="left"> **<< Previous notebook** </p>](./2_Basic_processing.md)
 
