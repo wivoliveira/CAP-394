@@ -64,8 +64,8 @@ The Amazon rainforest covers 9 Brazilian states: Acre, Amap√°, Amazonas, Maranh√
 <table align='left'>
 <tr>
 <td>Landsat-8 grids
-    <img src='./images/LandsatGrids_perState.PNG' width='460' height='200'/></td>
-<td>Sentinel-2 tiles<img src="./images/Sentinel2Zones_perState.PNG" width='460' height='200'/></td>
+    <img src='./images/LandsatGrids_perState.PNG' width=100%/></td>
+<td>Sentinel-2 tiles<img src="./images/Sentinel2Zones_perState.PNG" width=90%/></td>
 </tr>
 </table>
 
