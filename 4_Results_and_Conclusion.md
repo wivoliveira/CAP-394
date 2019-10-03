@@ -39,8 +39,10 @@ There are <b>234 Landsat-8 grids</b> that intersect the Brazilian states covered
 
 <table align='left'>
 <tr>
-<td><img src='./images/LandsatGrids.PNG' width='460' height='200'/>Landsat-8 grids</td>
-<td><img src='./images/SentinelTiles.PNG' width='480' height='200'/> Sentinel-2 tiles</td>
+<td>Landsat-8 grids
+    <img src='./images/LandsatGrids.PNG' width=92%/> </td>
+<td>Sentinel-2 tiles
+    <img src='./images/SentinelTiles.PNG' width=100%/> </td>
 </tr>
 </table>
 
